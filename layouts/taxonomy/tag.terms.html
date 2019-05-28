@@ -1,0 +1,26 @@
+{{ define "header" }}
+<header class="site-header">
+	{{ partial "navigation.html" . }}
+
+	<div class="tag-header container">
+    <h5 class="tag-description">
+      <a href="/"><i class="fas fa-arrow-left"></i> Alle Blogeinträge anzeigen</a> 
+    </h2>
+		<h1 class="tag-title">
+      <span>Tags</span>
+		</h1>
+	</div>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<main class="site-main container">
+  <div class="article-content mt-5">
+    <ul>
+      {{ range .Pages }}
+        <li><a href="{{ .RelPermalink }}">#{{ .Title }} ({{ len .Pages }})</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</main>
+{{ end }}

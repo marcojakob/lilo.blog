@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Content Manager</title>
+
+    <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/netlify-cms@^2.6.0/dist/netlify-cms.js"></script>
+    <script>
+      CMS.registerPreviewStyle("/css/bootstrap.min.css");
+      CMS.registerPreviewStyle("/css/main.css");
+
+      const previewStyles = `
+      img {
+        max-height: 200px;
+      }
+      `;
+      CMS.registerPreviewStyle(previewStyles, { raw: true });
+    </script>
+  </body>
+</html>

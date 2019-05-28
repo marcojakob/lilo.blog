@@ -1,0 +1,6 @@
++++
+headless = true
+siteHeader = ""
+siteFooter = ""
++++
+

@@ -1,0 +1,33 @@
+languageCode = "de"
+enableGitInfo = true
+removePathAccents = true
+disableFastRender = true
+buildFuture = true
+copyright = "Lernblog -- www.lernblog.ch"
+paginatePath = "seite"
+paginate = 12
+disableKinds = ["RSS", "section"]
+pygmentsCodefences = true
+
+[params]
+version = "1.0"
+
+[permalinks]
+posts = "/:filename/"
+pages = "/:filename/"
+tags = "/tag/:slug/"
+
+[taxonomies]
+tag = "tags"
+
+[outputs]
+home = ["HTML", "ATOM", "JSON"]
+
+[mediaTypes."application/atom+xml"]
+suffixes = ["xml"]
+
+[outputFormats.ATOM]
+mediaType = "application/atom+xml"
+baseName = "index"
+isPlainText = false
+

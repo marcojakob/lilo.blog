@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $settingsAuthor := .Site.GetPage "/settings/author" -}}
+<main class="site-main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8">
+				<div class="page-header">
+					<h1 class="page-title">{{ .Title }}</h1>
+				</div>
+
+				<div class="article-content">
+					{{ partial "figcaption.html" .Content }}
+
+					{{ with .Params.footnotes }}
+						<hr>
+						<div class="article-footnotes">
+							<small>{{ . | markdownify }}</small>
+						</div>
+					{{ end }}
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+{{ end }}

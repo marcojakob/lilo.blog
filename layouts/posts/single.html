@@ -1,0 +1,54 @@
+{{ define "main" }}
+{{ $settingsAuthor := .Site.GetPage "/settings/author" -}}
+<main class="site-main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8">
+				<div class="post-header">
+					{{ with .Params.tags }}
+					<ul class="post-tags list-inline">
+						{{ range . }}
+						<li class="list-inline-item">
+							<a href="{{ "tag/" | relURL }}{{ . | urlize }}/">#{{ . }}</a>
+						</li>
+						{{ end }}
+					</ul>
+					{{ end }}
+					
+					<h1 class="post-title">{{ .Title }}</h1>
+					
+					<div class="post-meta">
+						<img src="{{ $settingsAuthor.Params.image | default "/img/default-author.png" }}" class="rounded-circle" alt="{{ $settingsAuthor.Params.name }}">
+						{{ $settingsAuthor.Params.name }} <span class="dot"></span> {{ partial "post_date.html" . }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="post-featured-image-wrapper">
+				<img class="post-featured-image" src="{{ .Params.image }}" alt="" data-zoomable>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8">
+				<div class="article-content">
+					{{ partial "figcaption.html" .Content }}
+
+					{{ with .Params.footnotes }}
+						<hr>
+						<div class="article-footnotes">
+							<small>{{ . | markdownify }}</small>
+						</div>
+					{{ end }}
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+{{ end }}

@@ -1,0 +1,26 @@
+{{ $generalPage := .Site.GetPage "/settings/general" -}}
+{{ $settingsDesign := .Site.GetPage "/settings/design" -}}
+{{ $settingsNavigation := .Site.GetPage "/settings/navigation" -}}
+<nav class="site-nav navbar navbar-expand-md navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="{{ $settingsDesign.Params.logo | default "/img/default-logo.png" }}" alt="{{ $generalPage.Title }}">
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <!-- Begin Menu -->
+      <ul class="navbar-nav ml-auto">
+        {{ $currentUrl := .RelPermalink }}
+        {{ range $settingsNavigation.Params.link }}
+        <li class="nav-item">
+          <a class="nav-link {{ if eq .url $currentUrl }}active{{ end }}" href="{{ .url }}">{{ .title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+      <!-- End Menu -->
+    </div>
+  </div>
+</nav>

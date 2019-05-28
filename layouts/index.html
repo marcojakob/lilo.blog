@@ -1,0 +1,41 @@
+{{ define "header" }}
+{{ $settingsGeneral := .Site.GetPage "/settings/general" -}}
+{{ $settingsDesign := .Site.GetPage "/settings/design" -}}
+
+{{ $headerStyle := "" -}}
+{{ if $settingsDesign.Params.image -}}
+{{ $headerStyle = print `background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url(` $settingsDesign.Params.image `);` -}}
+{{ end -}}
+<header class="site-header site-header-img"{{ with $headerStyle }} style="{{ . | safeCSS }}"{{ end }}>
+	{{ partial "navigation.html" . }}
+
+	<div class="site-header-img-content container d-flex flex-column justify-content-center">
+		<h1 class="site-title">
+			{{ $settingsGeneral.Title | default "[Titel]" }}
+		</h1>
+		<h2 class="site-description">
+			{{ $settingsGeneral.Description | default "[Untertitel]" }}
+		</h2>
+	</div>
+</header>
+{{ end }}
+
+{{ define "head_includes" }}
+<script defer src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
+{{ end }}
+
+{{ define "main" }}
+<main class="site-main container">
+	{{ $posts := where (where .Pages "Section" "posts") "Params.pinned" "!=" true }}
+	{{ $posts := $posts | union (where (where .Pages "Section" "posts") "Params.pinned" true) }}
+	{{ $paginator := .Paginate $posts }}
+	
+	<div class="post-card-deck card-deck">
+		{{ range $paginator.Pages }}
+			{{ partial "post_card.html" . }}
+		{{ end }}
+	</div>
+
+	{{ partial "pagination.html" . }}
+</main>
+{{ end }}

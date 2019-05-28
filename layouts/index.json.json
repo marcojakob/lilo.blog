@@ -1,0 +1,47 @@
+{{ $settingsGeneral := .Site.GetPage "/settings/general" -}}
+{{ $settingsDesign := .Site.GetPage "/settings/design" -}}
+{{ $settingsAuthor := .Site.GetPage "/settings/author" -}}
+
+{
+  "version": "https://jsonfeed.org/version/1",
+  "_lernblog": {
+    "about": "https://www.lernblog.ch",
+    "version": "{{ .Site.Params.version }}",
+    "copyright": "2019 by Lernblog.ch"
+  },
+  "title": "{{ $settingsGeneral.Title | htmlEscape }}",
+  "home_page_url": "{{ .Site.BaseURL }}",
+  "feed_url": "{{ "index.json" | absURL }}",
+  "description": "{{ $settingsGeneral.Description | htmlEscape }}",
+  "user_comment": "Feed for Lernblog - www.lernblog.ch",
+  "icon": "{{ $settingsDesign.Params.logo | default "/img/default-logo.png" | absURL }}",
+  "favicon": "{{ $settingsDesign.Params.icon | default "/img/default-favicon.png" | absURL }}",
+  "_lernblog_image": "{{ $settingsDesign.Params.image | default "/img/default-image.png" | absURL }}",
+  "author": {
+    "name": "{{ $settingsAuthor.Params.name | htmlEscape }}",
+    "url": "{{ .Site.BaseURL }}",
+    "avatar": "{{ $settingsAuthor.Params.image | default "/img/default-author.png" | absURL }}",
+    "_lernblog_email": "{{ $settingsAuthor.Params.email }}"
+  },
+  "_lernblog_date_build": "{{ now.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
+  "items": [
+    {{- range $i, $e := where .Pages "Section" "posts" }}
+    {{- if $i }},{{ end }}
+    {
+      "id": "{{ $e.Permalink }}",
+      "url": "{{ $e.Permalink }}",
+      "title": "{{ $e.Title | htmlEscape }}",
+      "summary": "{{ if $e.Description }}{{ $e.Description | htmlEscape }}{{ else }}{{ $e.Summary | htmlEscape }}{{ end }}",
+      "image": "{{ $e.Params.image | absURL }}",
+      "date_published": "{{ $e.Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
+      "date_updated": "{{ $e.Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
+      "tags": [
+        {{- range $i, $e := .Params.tags -}}
+        {{- if $i }},{{ end -}}
+        "{{ $e | htmlEscape }}"
+        {{- end -}}
+      ]
+    }
+    {{- end }}
+  ]
+}

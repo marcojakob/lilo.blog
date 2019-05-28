@@ -1,0 +1,2 @@
+{{/* Turn all images in to <figcaption> with alt text. */}}
+{{ . | replaceRE `<img.+alt=\"([^\"]+)\"[^>]+>` `<figure>$0<figcaption>$1</figcaption></figure>` | safeHTML }}

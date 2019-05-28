@@ -1,0 +1,252 @@
+backend:
+  name: git-gateway
+
+media_folder: "content/img"
+public_folder: "img"
+
+collections:
+  - label: "Blogeinträge"
+    label_singular: "Blogeintrag"
+    description: >
+      Hier können Blogeinträge verfasst, editiert und gelöscht werden.
+      Blogeinträge erscheinen in der Übersicht auf der Frontseite.
+    name: "posts"
+    folder: "content/posts"
+    create: true
+    format: toml-frontmatter
+    fields:
+      - {
+          label: "Titel",
+          name: "title",
+          widget: "string",
+          hint: "Beim ersten Speichern wird der Titel zur URL des Blogartikels.",
+        }
+      - {
+          label: "Datum",
+          name: "date",
+          widget: "date",
+          dateFormat: "DD.MM.YYYY",
+        }
+      - {
+          label: "Entwurfsmodus",
+          name: "draft",
+          widget: "boolean",
+          hint: "Einträge im Entwurfsmodus werden nicht angezeigt.",
+          default: false,
+        }
+      - {
+          label: "Anheften",
+          name: "pinned",
+          widget: "boolean",
+          hint: "Angeheftete Einträge werden zuoberst vor den neusten Einträgen angezeigt.",
+          default: false,
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          hint: "Mehrere Tags durch Komma trennen.",
+        }
+      - {
+          label: "Zusammenfassung",
+          name: "description",
+          widget: "text",
+          hint: "Kurze Beschreibung für Blogübersicht, Suchmaschinen und Social Media (ca. 2 Sätze, max. 160 Zeichen).",
+        }
+      - {
+          label: "Bild",
+          name: "image",
+          widget: "image",
+          hint: "Dieses Bild wird in der Blogübersicht, in Suchmaschinen und auf Social Media angezeigt.",
+        }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
+      - {
+          label: "Fussnoten",
+          name: "footnotes",
+          widget: "markdown",
+          hint: "Kann für Quellenangaben oder andere Hinweise verwendet werden.",
+          required: false,
+        }
+  - label: "Unterseiten"
+    label_singular: "Unterseite"
+    description: >
+      Unterseiten erscheinen nicht in der Übersicht auf der Frontseite.
+      Sie werden durch einen direkten Link aufgerufen. Wenn der Link unter 
+      Einstellungen/Navigation hinzugefügt wird, dann ist die Seite über die 
+      Navigation erreichbar.
+    name: "pages"
+    folder: "content/pages"
+    create: true
+    format: "toml-frontmatter"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - {
+          label: "Entwurfsmodus",
+          name: "draft",
+          widget: "boolean",
+          hint: "Seiten im Entwurfsmodus werden nicht angezeigt.",
+          default: false,
+        }
+      - {
+          label: "Zusammenfassung",
+          name: "description",
+          widget: "text",
+          hint: "Kurze Beschreibung für Suchmaschinen und Social Media (ca. 2 Sätze).",
+        }
+      - {
+          label: "Bild",
+          name: "image",
+          widget: "image",
+          hint: "Wird in Suchmaschinen und bei Social Media angezeigt, wenn die Seite geteilt wird.",
+        }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
+  - label: "Einstellungen"
+    name: "settings"
+    delete: false
+    editor:
+      preview: false
+    format: "toml-frontmatter"
+    files:
+      - label: "Allgemein"
+        name: "general"
+        file: "content/settings/general/index.md"
+        fields:
+          - {
+              label: "Headless",
+              name: "headless",
+              widget: "hidden",
+              default: "true",
+            }
+          - {
+              label: Seitentitel,
+              name: title,
+              widget: string,
+              hint: "Haupttitel der Website.",
+            }
+          - {
+              label: "Beschreibung",
+              name: "description",
+              widget: "string",
+              hint: "Eine kurze Beschreibung der Website (Tagline).",
+            }
+          - {
+              label: "Fusszeile links",
+              name: "footerLeft",
+              widget: "markdown",
+              hint: "Fusszeile ganz unten links an der Seite.",
+            }
+          - {
+              label: "Fusszeile rechts",
+              name: "footerRight",
+              widget: "markdown",
+              hint: "Fusszeile ganz unten rechts an der Seite.",
+            }
+      - label: "Autor"
+        name: "author"
+        file: "content/settings/author/index.md"
+        fields:
+          - {
+              label: "Headless",
+              name: "headless",
+              widget: "hidden",
+              default: "true",
+            }
+          - {
+              label: "Name",
+              name: "name",
+              widget: "string",
+              hint: "Dein Vor- und Nachname.",
+            }
+          - {
+              label: "Profilbild",
+              name: "image",
+              widget: "image",
+              hint: "Kleines Bild (muss quadratisch sein).",
+            }
+          - {
+              label: "E-Mail",
+              name: "email",
+              widget: "string",
+              hint: "Deine E-Mail-Adresse.",
+            }
+      - label: "Design"
+        name: "design"
+        file: "content/settings/design/index.md"
+        fields:
+          - {
+              label: "Headless",
+              name: "headless",
+              widget: "hidden",
+              default: "true",
+            }
+          - {
+              label: Icon,
+              name: icon,
+              widget: image,
+              hint: "Kleines, quadratisches Bild für das Browser-Tab.",
+            }
+          - {
+              label: Logo,
+              name: logo,
+              widget: image,
+              hint: "Kleines Logo für die Navigation.",
+            }
+          - {
+              label: Hauptbild,
+              name: image,
+              widget: image,
+              hint: "Hintergrundbild für die Startseite.",
+            }
+          - {
+              label: "Farbe",
+              name: "color",
+              widget: "string",
+              hint: "Farbe für Links, Zitate, Buttons, etc. (als Hex-Farbcode, z.B. #ff7260)",
+              pattern:
+                ["^#[0-9a-fA-F]{3,6}$", "Muss ein gültiger Hex-Farbcode sein"],
+            }
+      - label: "Navigation"
+        name: "navigation"
+        file: "content/settings/navigation/index.md"
+        fields:
+          - {
+              label: "Headless",
+              name: "headless",
+              widget: "hidden",
+              default: "true",
+            }
+          - {
+              label: "Link",
+              name: "link",
+              widget: "list",
+              hint: "Links in der Navigation",
+              fields:
+                [
+                  { label: Titel, name: title, widget: string },
+                  { label: URL, name: url, widget: string },
+                ],
+            }
+      - label: "Code (für Profis)"
+        name: "code"
+        file: "content/settings/code/index.md"
+        fields:
+          - {
+              label: "Headless",
+              name: "headless",
+              widget: "hidden",
+              default: "true",
+            }
+          - {
+              label: Site Header Code,
+              name: siteHeader,
+              widget: text,
+              required: false,
+              hint: "Dieser Code wird im Head-Bereich auf jeder Seite eingefügt.",
+            }
+          - {
+              label: Site Footer Code,
+              name: siteFooter,
+              widget: text,
+              required: false,
+              hint: "Dieser Code wird am Ende des Body-Bereichs auf jeder Seite eingefügt.",
+            }

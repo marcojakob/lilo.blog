@@ -1,0 +1,13 @@
+{{/* 
+  Returns the absolute url of an asset. Use as follows:
+  {{ partial "asset_permalink.html" (dict "folder" .RelPermalink "asset" .Params.image) }}
+*/}}
+{{ $result := "" }}
+{{ if .asset }}
+  {{ if hasPrefix .asset "/" }}
+    {{ $result = .asset | absURL }}
+  {{ else }}
+    {{ $result = (path.Join .folder .asset) | absURL }}
+  {{ end }}
+{{ end }}
+{{ return $result }}

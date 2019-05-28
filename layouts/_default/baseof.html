@@ -1,0 +1,29 @@
+{{ $settingsCode := .Site.GetPage "/settings/code" -}}
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+	{{ partial "head.html" . }}
+	{{ block "head_includes" . }}{{ end }} 
+	{{ with $settingsCode.Params.siteheader }}{{ . | safeHTML }}{{ end }}
+</head>
+<body class="kind-{{ .Kind }}{{with .Section }} section-{{ . }}{{ end }}">
+{{ block "header" . }}
+	<header class="site-header">
+		{{ partial "navigation.html" . -}}
+	</header>
+{{ end }}
+
+{{ block "main" . }}{{ end }}
+
+{{ block "footer" . }}
+	{{ partial "footer.html" . -}}
+{{ end }}
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/medium-zoom.min.js"></script>
+<script src="/js/app.js"></script>
+{{ with $settingsCode.Params.sitefooter }}{{ . | safeHTML }}{{ end }}
+</body>
+</html>

@@ -1,0 +1,24 @@
+{{ $aboutPage := .Site.GetPage "/about" -}}
+<div class="post-card-outer">
+  <div class="post-card card">
+    <a href="{{ .RelPermalink }}" class="stretched-link"></a>
+    <div class="card-image" style="background-image:url({{ if not (hasPrefix .Params.image "/") }}{{ .RelPermalink }}{{ end }}{{ .Params.image }});"></div>
+    <div class="card-body">
+      {{ with .Params.tags -}}
+      <div class="card-tags">
+        {{ range . -}}
+          <span class="main-color">#{{ . }}</span>
+        {{ end -}}
+      </div>
+      {{ end -}}
+      <h2 class="card-title">{{ .Title | truncate 60 }}</h2>
+      <div class="card-text">{{ .Description | truncate 160 }}</div>
+    </div>
+    <div class="card-footer">
+      {{ partial "post_date.html" . }}
+      {{ if .Params.pinned }}
+        <span class="card-pin float-right main-color" title="Angehefteter Post"><i class="fas fa-thumbtack"></i></span>
+      {{ end }}
+    </div>
+  </div>
+</div>
