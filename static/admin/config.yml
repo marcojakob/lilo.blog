@@ -133,12 +133,14 @@ collections:
               label: "Fusszeile links",
               name: "footerLeft",
               widget: "markdown",
+              required: false,
               hint: "Fusszeile ganz unten links an der Seite.",
             }
           - {
               label: "Fusszeile rechts",
               name: "footerRight",
               widget: "markdown",
+              required: false,
               hint: "Fusszeile ganz unten rechts an der Seite.",
             }
       - label: "Autor"
