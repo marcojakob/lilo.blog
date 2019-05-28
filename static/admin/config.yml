@@ -25,6 +25,7 @@ collections:
           label: "Datum",
           name: "date",
           widget: "date",
+          format: "YYYY-MM-DD",
           dateFormat: "DD.MM.YYYY",
         }
       - {
