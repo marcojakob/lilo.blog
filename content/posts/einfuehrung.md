@@ -1,6 +1,6 @@
 +++
 title = "Einführung"
-date = 2019-05-28
+date = "2019-05-28"
 draft = false
 pinned = false
 tags = [ "Einführung", "Ideen" ]
