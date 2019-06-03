@@ -26,13 +26,15 @@
 		</div>
 	</div>
 	
+	{{- with .Params.image }}
 	<div class="container-fluid">
 		<div class="row">
 			<div class="post-featured-image-wrapper">
-				<img class="post-featured-image" src="{{ .Params.image }}" alt="" data-zoomable>
+				<img class="post-featured-image" src="{{ . }}" alt="" data-zoomable>
 			</div>
 		</div>
 	</div>
+	{{- end }}
 	
 	<div class="container">
 		<div class="row">

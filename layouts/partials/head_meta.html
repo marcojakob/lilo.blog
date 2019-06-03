@@ -86,8 +86,13 @@
 <meta property="og:title" content="{{ with .Title }}{{ . }} | {{ end }}{{ $settingsGeneral.Title }}">
 <meta property="og:description" content="{{ .Description | default $settingsGeneral.Description }}">
 <meta property="og:url" content="{{ .Permalink }}">
-{{ printf `<meta property="og:image" content="%s">` (.Params.image | default $settingsDesign.Params.image | default "/img/default-image.png" | absURL) | safeHTML }}
-
-{{ range .AlternativeOutputFormats -}}
+{{- if .IsHome }}
+{{ printf `<meta property="og:image" content="%s">` ($settingsDesign.Params.image | default "/img/default-image.png" | absURL) | safeHTML }}
+{{- else }}
+  {{- if .Params.image }}
+  {{ printf `<meta property="og:image" content="%s">` (partial "asset_permalink.html" (dict "folder" .RelPermalink "asset" .Params.image)) | safeHTML }}
+  {{- end }}
+{{- end }}
+{{- range .AlternativeOutputFormats -}}
 {{ printf `<link rel="%s" type="%s" href="%s" />` .Rel .MediaType.Type .Permalink | safeHTML }}
 {{ end -}}

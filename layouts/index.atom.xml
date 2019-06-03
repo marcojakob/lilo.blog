@@ -34,7 +34,9 @@
     {{- range .Params.tags }}
     <category term="{{ . | urlize }}" label="{{ . | htmlEscape }}" scheme="{{ path.Join "tag" ( . | urlize) | absURL }}" />
     {{- end }}
-    <link href="{{ .Params.image | absURL }}" rel="enclosure" type="image/*" />
+    {{- with .Params.image }}
+    <link href="{{ . | absURL }}" rel="enclosure" type="image/*" />
+    {{ end }}
   </entry>
   {{- end }}
 </feed>

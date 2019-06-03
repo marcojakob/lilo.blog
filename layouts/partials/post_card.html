@@ -2,7 +2,9 @@
 <div class="post-card-outer">
   <div class="post-card card">
     <a href="{{ .RelPermalink }}" class="stretched-link"></a>
-    <div class="card-image" style="background-image:url({{ if not (hasPrefix .Params.image "/") }}{{ .RelPermalink }}{{ end }}{{ .Params.image }});"></div>
+    {{- if .Params.image }}
+    <div class="card-image" style="background-image:url({{ partial `asset_permalink.html` (dict `folder` .RelPermalink `asset` .Params.image) }});"></div>
+    {{- end }}
     <div class="card-body">
       {{ with .Params.tags -}}
       <div class="card-tags">

@@ -7,7 +7,7 @@ tags = [ "Einführung", "Ideen" ]
 description = "In diesem Test-Blogeintrag werden Möglichkeiten aufgezeigt für das Verfassen von Blogeinträgen."
 image = "/img/default-image.png"
 footnotes = """
-*Ganz unten an der Seite können zum Beispiel Bildquellen angegeben werden. Dieser Text ist abgetrennt durch eine Linie und etwas kleiner. Kursiv stellen muss man ihn selber.*
+Ganz unten an der Seite können zum Beispiel Bildquellen angegeben werden. Dieser Text ist abgetrennt durch eine Linie und etwas kleiner.
 """
 +++
 

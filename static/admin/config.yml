@@ -59,6 +59,7 @@ collections:
           name: "image",
           widget: "image",
           hint: "Dieses Bild wird in der Blogübersicht, in Suchmaschinen und auf Social Media angezeigt.",
+          required: false,
         }
       - { label: "Inhalt", name: "body", widget: "markdown" }
       - {

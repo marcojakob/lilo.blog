@@ -32,7 +32,9 @@
       "url": "{{ $e.Permalink }}",
       "title": {{ $e.Title | jsonify }},
       "summary": {{ $e.Description | jsonify }},
-      "image": "{{ $e.Params.image | absURL }}",
+      {{- with $e.Params.image }}
+      "image": "{{ . | absURL }}",
+      {{- end }}
       "date_published": "{{ $e.Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
       "date_updated": "{{ $e.Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
       "tags": [
