@@ -1,5 +1,5 @@
 {{ $designPage := .Site.GetPage "/settings/design" -}}
-{{ $defaultColor := "#ff7260" }}
+{{ $defaultColor := "#ff7260" -}}
 .main-color {
   color: {{ $designPage.Params.color | default $defaultColor }} !important;
 }
