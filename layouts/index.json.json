@@ -5,23 +5,23 @@
 {
   "version": "https://jsonfeed.org/version/1",
   "_lernblog": {
-    "about": "https://www.lernblog.ch",
-    "version": "{{ .Site.Params.version }}",
-    "copyright": "2019 by Lernblog.ch"
+    "about": "{{ .Site.Params.lernblogUrl }}",
+    "version": "{{ .Site.Params.lernblogVersion }}",
+    "copyright": "{{ .Site.Copyright }}"
   },
-  "title": "{{ $settingsGeneral.Title | htmlEscape }}",
+  "title": {{ $settingsGeneral.Title | jsonify }},
   "home_page_url": "{{ .Site.BaseURL }}",
   "feed_url": "{{ "index.json" | absURL }}",
-  "description": "{{ $settingsGeneral.Description | htmlEscape }}",
-  "user_comment": "Feed for Lernblog - www.lernblog.ch",
+  "description": {{ $settingsGeneral.Description | jsonify }},
+  "user_comment": "{{ .Site.Params.lernblogName }} {{ .Site.Params.lernblogVersion }} - {{ .Site.Params.lernblogUrl }}",
   "icon": "{{ $settingsDesign.Params.logo | default "/img/default-logo.png" | absURL }}",
   "favicon": "{{ $settingsDesign.Params.icon | default "/img/default-favicon.png" | absURL }}",
   "_lernblog_image": "{{ $settingsDesign.Params.image | default "/img/default-image.png" | absURL }}",
   "author": {
-    "name": "{{ $settingsAuthor.Params.name | htmlEscape }}",
+    "name": {{ $settingsAuthor.Params.name | jsonify }},
     "url": "{{ .Site.BaseURL }}",
     "avatar": "{{ $settingsAuthor.Params.image | default "/img/default-author.png" | absURL }}",
-    "_lernblog_email": "{{ $settingsAuthor.Params.email }}"
+    "_lernblog_email": {{ $settingsAuthor.Params.email | jsonify }}
   },
   "_lernblog_date_build": "{{ now.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
   "items": [
@@ -30,15 +30,15 @@
     {
       "id": "{{ $e.Permalink }}",
       "url": "{{ $e.Permalink }}",
-      "title": "{{ $e.Title | htmlEscape }}",
-      "summary": "{{ if $e.Description }}{{ $e.Description | htmlEscape }}{{ else }}{{ $e.Summary | htmlEscape }}{{ end }}",
+      "title": {{ $e.Title | jsonify }},
+      "summary": {{ $e.Description | jsonify }},
       "image": "{{ $e.Params.image | absURL }}",
       "date_published": "{{ $e.Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
       "date_updated": "{{ $e.Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
       "tags": [
         {{- range $i, $e := .Params.tags -}}
-        {{- if $i }},{{ end -}}
-        "{{ $e | htmlEscape }}"
+          {{- if $i }},{{ end -}}
+          {{ $e | jsonify }}
         {{- end -}}
       ]
     }

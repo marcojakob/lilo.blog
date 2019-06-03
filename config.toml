@@ -3,14 +3,16 @@ enableGitInfo = true
 removePathAccents = true
 disableFastRender = true
 buildFuture = true
-copyright = "Lernblog -- www.lernblog.ch"
 paginatePath = "seite"
 paginate = 12
 disableKinds = ["RSS", "section"]
 pygmentsCodefences = true
+copyright = "2019 by lernblog.ch - Creative Commons Attribution-ShareAlike 4.0"
 
 [params]
-version = "1.0.1"
+lernblogName = "Lernblog"
+lernblogVersion = "1.0.2"
+lernblogUrl = "https://www.lernblog.ch"
 
 [permalinks]
 posts = "/:filename/"
