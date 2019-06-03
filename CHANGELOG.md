@@ -2,6 +2,7 @@
 
 ## Version 1.0.3 (2019-06-03)
 
+- CMS: Profilbild, Icon, Logo und Hauptbild auf optional stellen.
 - Bild in der Blogübersicht nicht unter absolutem Pfad angeben, damit bei DNS-Umstellungen 
 und SSL-Fehlern trotzdem ein Bild angezeigt wird.
 
