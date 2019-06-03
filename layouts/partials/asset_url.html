@@ -1,0 +1,13 @@
+{{/* 
+  Returns the root-relative url of an asset. Use as follows:
+  {{ partial "asset_url.html" (dict "folder" .RelPermalink "asset" .Params.image) }}
+*/}}
+{{ $result := "" }}
+{{ if .asset }}
+  {{ if hasPrefix .asset "/" }}
+    {{ $result = .asset }}
+  {{ else }}
+    {{ $result = path.Join .folder .asset }}
+  {{ end }}
+{{ end }}
+{{ return $result }}

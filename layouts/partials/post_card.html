@@ -3,7 +3,7 @@
   <div class="post-card card">
     <a href="{{ .RelPermalink }}" class="stretched-link"></a>
     {{- if .Params.image }}
-    <div class="card-image" style="background-image:url({{ partial `asset_permalink.html` (dict `folder` .RelPermalink `asset` .Params.image) }});"></div>
+    <div class="card-image" style="background-image:url({{ partial `asset_url.html` (dict `folder` .RelPermalink `asset` .Params.image) }});"></div>
     {{- end }}
     <div class="card-body">
       {{ with .Params.tags -}}
