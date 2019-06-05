@@ -13,8 +13,8 @@
 
 					{{ with .Params.footnotes }}
 						<hr>
-						<div class="article-footnotes">
-							<small>{{ . | markdownify }}</small>
+						<div class="footnotes">
+							{{ . | markdownify }}
 						</div>
 					{{ end }}
 				</div>

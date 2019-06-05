@@ -455,8 +455,13 @@ hr {
 }
 
 /* POST & PAGE FOOTNOTES */
-.article-footnotes {
-  margin-bottom: 2.5rem;
+/* Note: .footnotes is also the class that blackfriday markdown parser creates for footnotes. */
+.article-content .footnotes {
+  font-size: 80%;
+}
+
+.article-content .footnotes p {
+  margin-bottom: 0.5rem;
 }
 
 /* Make sure medium zoom image is on top of everything else, especially bootstrap navbar */

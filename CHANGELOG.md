@@ -2,7 +2,7 @@
 
 ## Version 1.0.4 (2019-06-05)
 
-- Fussnote: Nur noch Textfeld und nicht mehr den grossen Rich-Text-Bereich.
+- Fussnote: Nur noch Textfeld und nicht mehr den grossen Rich-Text-Bereich. Styling der Fussnote verbessern.
 
 ## Version 1.0.3 (2019-06-03)
 
