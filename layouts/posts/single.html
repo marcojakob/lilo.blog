@@ -43,10 +43,10 @@
 					{{ partial "figcaption.html" .Content }}
 
 					{{ with .Params.footnotes }}
+					<div class="footnotes">
 						<hr>
-						<div class="footnotes">
-							{{ . | markdownify }}
-						</div>
+						{{ . | markdownify }}
+					</div>
 					{{ end }}
 				</div>
 			</div>

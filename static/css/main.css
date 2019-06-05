@@ -118,7 +118,7 @@ hr {
   margin-bottom: 1.5rem;
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.44);
-  margin-top: 50px;
+  margin-top: 3rem;
 }
 
 /* PAGINATION */
@@ -458,6 +458,7 @@ hr {
 /* Note: .footnotes is also the class that blackfriday markdown parser creates for footnotes. */
 .article-content .footnotes {
   font-size: 80%;
+  margin-top: 3rem;
 }
 
 .article-content .footnotes p {
