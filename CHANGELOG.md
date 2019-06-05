@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.0.4 (2019-06-05)
+
+- Fussnote: Nur noch Textfeld und nicht mehr den grossen Rich-Text-Bereich.
+
 ## Version 1.0.3 (2019-06-03)
 
 - CMS: Profilbild, Icon, Logo und Hauptbild auf optional stellen.
