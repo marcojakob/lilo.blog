@@ -420,6 +420,10 @@ hr {
   margin: 0 0 1.5rem 0;
 }
 
+.article-content blockquote cite {
+  font-size: 83.333333333333%;
+}
+
 .article-content > pre {
   background: rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
