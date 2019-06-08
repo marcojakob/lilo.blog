@@ -170,7 +170,7 @@ hr {
 }
 
 .tag-title span {
-  border-bottom: 1px solid rgba(0,0,0,.44);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.44);
   display: inline-block;
   padding-bottom: 20px;
   margin-bottom: -1px;
@@ -239,11 +239,27 @@ hr {
   margin-bottom: 0.2rem;
 }
 
-.post-card .card-title {
+.post-card .card-tags li:not(:last-child) {
+  margin-right: 0rem;
+}
+
+.post-card .card-tags a {
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+.above-stretched-link {
+  position: relative;
+  z-index: 2;
+}
+
+.post-card .card-title,
+.post-card .card-title a {
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.25;
   color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
 }
 
 .post-card .card-text {

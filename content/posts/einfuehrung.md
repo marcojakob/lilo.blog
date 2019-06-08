@@ -3,8 +3,8 @@ title = "Einführung"
 date = "2019-05-28"
 draft = false
 pinned = false
-tags = [ "Einführung", "Ideen" ]
-description = "In diesem Test-Blogeintrag werden Möglichkeiten aufgezeigt für das Verfassen von Blogeinträgen."
+tags = [ "Anleitung", "Lernblog" ]
+description = "In diesem Artikel werden Möglichkeiten aufgezeigt für das Verfassen von Blogeinträgen."
 image = "/img/default-image.png"
 footnotes = "Ganz unten an der Seite können zum Beispiel Bildquellen angegeben werden. Dieser Text ist abgetrennt durch eine Linie und etwas kleiner."
 +++

@@ -9,7 +9,7 @@
 					<ul class="post-tags list-inline">
 						{{ range . }}
 						<li class="list-inline-item">
-							<a href="{{ "tag/" | relURL }}{{ . | urlize }}/">#{{ . }}</a>
+							<a href="{{ print `/tag/` ( . | urlize ) `/` }}">#{{ . }}</a>
 						</li>
 						{{ end }}
 					</ul>
