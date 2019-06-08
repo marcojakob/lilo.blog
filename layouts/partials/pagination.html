@@ -4,7 +4,7 @@
   <ul class="pagination">
     {{ if $pag.HasPrev }}
     <li class="page-item">
-      <a href="{{ $pag.Prev.URL }}" class="page-link" aria-label="Previous"><span aria-hidden="true"><i class="fas fa-angle-left"></i></span></a>
+      <a href="{{ $pag.Prev.URL }}" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
     </li>
     {{ end }}
     {{ $ellipsed := false }}
@@ -28,7 +28,7 @@
     {{ end }}
     {{ if $pag.HasNext }}
     <li class="page-item">
-      <a href="{{ $pag.Next.URL }}" class="page-link" aria-label="Next"><span aria-hidden="true"><i class="fas fa-angle-right"></i></span></a>
+      <a href="{{ $pag.Next.URL }}" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     {{ end }}
   </ul>

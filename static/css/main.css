@@ -35,6 +35,19 @@ hr {
   opacity: 0.1;
 }
 
+.above-stretched-link {
+  position: relative;
+  z-index: 2;
+}
+
+.icon-svg-inline {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+
 /* SITE NAVIGATION */
 .site-nav {
   background: rgba(255, 255, 255, 0.97);
@@ -246,11 +259,6 @@ hr {
 .post-card .card-tags a {
   padding-top: 10px;
   padding-right: 5px;
-}
-
-.above-stretched-link {
-  position: relative;
-  z-index: 2;
 }
 
 .post-card .card-title,

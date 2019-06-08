@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.0.5 (2019-06-08)
+
+- Make tags clickable on frontpage cards.
+- Improve tag and tag overview pages.
+- Remove Font Awesome icon font. Instead use HTML arrows and Emojis.
+- Add custom svg pin icon.
+
 ## Version 1.0.4 (2019-06-05)
 
 - Fussnote: Nur noch Textfeld und nicht mehr den grossen Rich-Text-Bereich. Styling der Fussnote verbessern.
@@ -7,8 +14,7 @@
 ## Version 1.0.3 (2019-06-03)
 
 - CMS: Profilbild, Icon, Logo und Hauptbild auf optional stellen.
-- Bild in der Blogübersicht nicht unter absolutem Pfad angeben, damit bei DNS-Umstellungen 
-und SSL-Fehlern trotzdem ein Bild angezeigt wird.
+- Bild in der Blogübersicht nicht unter absolutem Pfad angeben, damit bei DNS-Umstellungen und SSL-Fehlern trotzdem ein Bild angezeigt wird.
 
 ## Version 1.0.2 (2019-06-03)
 
