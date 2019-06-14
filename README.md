@@ -2,6 +2,8 @@
 
 Weitere Informationen zum Lernblog siehe [www.lernblog.ch](https://www.lernblog.ch).
 
+Unter https://lernblog-template.netlify.com/ ist eine Vorschau des Lernblog Templates.
+
 ## Lizenz
 
 Weiternutzung ausdrücklich erlaubt!
