@@ -1,5 +1,4 @@
 languageCode = "de"
-enableGitInfo = true
 removePathAccents = true
 disableFastRender = true
 buildFuture = true
