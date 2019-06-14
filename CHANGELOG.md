@@ -1,6 +1,6 @@
 # Changelog
 
-## Version 1.1.0 (not released yet)
+## Version 1.1.0 (2019-06-14)
 
 - Use `/tags/...` as path to the tag overview and also every single tag page.
 - Remove `enableGitInfo` from config and use the command line flag in netlify instead. This makes it easier for users to download the repo and run Hugo locally without using git (see https://github.com/gohugoio/hugo/issues/6035).
