@@ -1,5 +1,6 @@
 {{ $designPage := .Site.GetPage "/settings/design" -}}
 {{ $defaultColor := "#ff7260" -}}
+<style>
 .main-color {
   color: {{ $designPage.Params.color | default $defaultColor }} !important;
 }
@@ -43,3 +44,4 @@ a:hover {
 .article-content blockquote {
   border-left-color: {{ $designPage.Params.color  | default $defaultColor }};
 }
+</style>
