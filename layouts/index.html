@@ -20,10 +20,6 @@
 </header>
 {{ end }}
 
-{{ define "head_includes" }}
-<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-{{ end }}
-
 {{ define "main" }}
 <main class="site-main container">
 	{{ $posts := where (where .Pages "Section" "posts") "Params.pinned" "!=" true }}
@@ -38,4 +34,21 @@
 
 	{{ partial "pagination.html" . }}
 </main>
+{{ end }}
+
+{{ define "body_includes" }}
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+// When a user logs in with the Netlify Identity widget, an access token directs to the site homepage. 
+// In order to complete the login and get back to the CMS, redirect the user back to the /admin/ path.
+if (window.netlifyIdentity) {
+	window.netlifyIdentity.on("init", user => {
+		if (!user) {
+			window.netlifyIdentity.on("login", () => {
+				document.location.href = "/admin/";
+			});
+		}
+	});
+}
+</script>
 {{ end }}
