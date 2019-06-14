@@ -3,6 +3,9 @@
 ## Version 1.1.1 (not released)
 
 - Add next and prev meta tags for paginated overview page.
+- Footnotes on custom pages.
+- Rename "Unterseiten" to "Eigene Seiten".
+
 ## Version 1.1.0 (2019-06-14)
 
 - Use `/tags/...` as path to the tag overview and also every single tag page.

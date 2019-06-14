@@ -2,7 +2,19 @@
 <!DOCTYPE html>
 <html lang="{{.Site.LanguageCode}}">
 <head>
-	{{ partial "head.html" . }}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	{{ partial "head_meta.html" . -}}
+	{{ block "head_meta_includes" . }}{{ end -}} 
+
+	<!-- Styles -->
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet">
+
+	<!-- User-defined styles -->
+	{{ partial "head_custom_styles.html" . }}
+	
 	{{ block "head_includes" . }}{{ end }} 
 	{{ with $settingsCode.Params.siteheader }}{{ . | safeHTML }}{{ end }}
 </head>

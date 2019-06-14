@@ -74,11 +74,11 @@ collections:
           required: false,
           hint: "Kann für Quellenangaben oder andere Hinweise verwendet werden.",
         }
-  - label: "Unterseiten"
-    label_singular: "Unterseite"
+  - label: "Eigene Seiten"
+    label_singular: "Seite"
     description: >
-      Unterseiten erscheinen nicht in der Übersicht auf der Frontseite.
-      Sie werden durch einen direkten Link aufgerufen. Wenn der Link unter 
+      Eigene Seiten erscheinen nicht in der Übersicht mit den Blogeinträgen auf der 
+      Frontseite. Sie werden durch einen direkten Link aufgerufen. Wenn der Link unter 
       Einstellungen/Navigation hinzugefügt wird, dann ist die Seite über die 
       Navigation erreichbar.
     name: "pages"
@@ -108,6 +108,13 @@ collections:
           hint: "Wird in Suchmaschinen und bei Social Media angezeigt, wenn die Seite geteilt wird.",
         }
       - { label: "Inhalt", name: "body", widget: "markdown" }
+      - {
+          label: "Fussnoten",
+          name: "footnotes",
+          widget: "text",
+          required: false,
+          hint: "Kann für Quellenangaben oder andere Hinweise verwendet werden.",
+        }
   - label: "Einstellungen"
     name: "settings"
     delete: false
