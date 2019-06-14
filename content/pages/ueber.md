@@ -8,6 +8,6 @@ image = "/img/default-author.png"
 
 ## Vorname Nachname
 
-<mailto:info@meineadresse.ch>
+info@lernblog.ch
 
 Beschreibung, wer ich bin...
