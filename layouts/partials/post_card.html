@@ -9,7 +9,7 @@
       <ul class="card-tags list-inline">
         {{ range . -}}
         <li class="list-inline-item">
-          <a href="{{ print `/tag/` ( . | urlize ) `/` }}" class="above-stretched-link">#{{ . }}</a>
+          <a href="{{ partial `tag_url.html` (dict `context` $ `tag` .) }}" class="above-stretched-link">#{{ . }}</a>
         </li>
         {{ end -}}
       </ul>

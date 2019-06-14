@@ -16,7 +16,6 @@ lernblogUrl = "https://www.lernblog.ch"
 [permalinks]
 posts = "/:filename/"
 pages = "/:filename/"
-tags = "/tag/:slug/"
 
 [taxonomies]
 tag = "tags"

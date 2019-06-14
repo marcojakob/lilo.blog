@@ -46,6 +46,11 @@ collections:
           label: "Tags",
           name: "tags",
           widget: "list",
+          pattern:
+            [
+              "^[^\\s#]+$",
+              "Darf keine Leerschläge oder # enthalten. Bitte mehrere Tags durch Komma trennen.",
+            ],
           hint: "Tags sind hilfreich, damit Besucher nach diesen filtern können. Mehrere Tags durch Komma trennen.",
         }
       - {

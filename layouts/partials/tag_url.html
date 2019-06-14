@@ -1,0 +1,8 @@
+{{/* 
+  Returns the root-relative url of a tag. It is better to use this
+  template than to construct it manually as it uses the same actual
+  generated url of the specified tag page.
+  It also replaces the # with %23 to work in urls.
+  {{ partial `tag_url.html` (dict `context` $ `tag` .) }}
+*/}}
+{{ return ( .context.Site.GetPage ( print "/tags/" (.tag | urlize) ) ).Permalink }}
