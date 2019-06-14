@@ -78,7 +78,7 @@
 {{ end }}
 
 <meta name="generator" content="{{ .Site.Params.lernblogName }} {{ .Site.Params.lernblogVersion }} - {{ .Site.Params.lernblogUrl }}" />
-<link rel="icon" href="{{ $settingsDesign.Params.icon | default "/img/default-favicon.png" }}">
+<link rel="icon" href="{{ $settingsDesign.Params.icon | default `/img/default-favicon.png` }}">
 <title>{{ with .Title }}{{ . }} | {{ end }}{{ $settingsGeneral.Title }}</title>
 <meta name="description" content="{{ .Description | default $settingsGeneral.Description }}">
 <meta name="author" content="{{ $settingsAuthor.Params.name }}">
