@@ -5,6 +5,7 @@
 - Add next and prev meta tags for paginated overview page.
 - Footnotes on custom pages.
 - Rename "Unterseiten" to "Eigene Seiten".
+- Switch CDN for NetlifyCMS because of slow loading times (from jsdelivr to unpkg).
 
 ## Version 1.1.0 (2019-06-14)
 
