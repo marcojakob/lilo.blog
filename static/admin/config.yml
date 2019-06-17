@@ -53,20 +53,21 @@ collections:
             ],
           hint: "Tags sind hilfreich, damit Besucher nach diesen filtern können. Mehrere Tags durch Komma trennen.",
         }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
       - {
           label: "Zusammenfassung",
           name: "description",
           widget: "text",
-          hint: "Kurze Beschreibung für Blogübersicht, Suchmaschinen und Social Media (ca. 2 Sätze, max. 160 Zeichen).",
+          required: false,
+          hint: "Kurze Beschreibung für Blogübersicht, Suchmaschinen und Social Media (ca. 2 Sätze).",
         }
       - {
           label: "Bild",
           name: "image",
           widget: "image",
           required: false,
-          hint: "Dieses Bild wird in der Blogübersicht, in Suchmaschinen und auf Social Media angezeigt.",
+          hint: "Bild für Blogübersicht, Suchmaschinen und Social Media.",
         }
-      - { label: "Inhalt", name: "body", widget: "markdown" }
       - {
           label: "Fussnoten",
           name: "footnotes",
@@ -94,20 +95,21 @@ collections:
           hint: "Seiten im Entwurfsmodus werden nicht angezeigt.",
           default: false,
         }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
       - {
           label: "Zusammenfassung",
           name: "description",
           widget: "text",
-          hint: "Kurze Beschreibung für Suchmaschinen und Social Media (ca. 2 Sätze).",
+          required: false,
+          hint: "Kurze Beschreibung für Blogübersicht, Suchmaschinen und Social Media (ca. 2 Sätze).",
         }
       - {
           label: "Bild",
           name: "image",
           widget: "image",
           required: false,
-          hint: "Wird in Suchmaschinen und bei Social Media angezeigt, wenn die Seite geteilt wird.",
+          hint: "Bild für Blogübersicht, Suchmaschinen und Social Media.",
         }
-      - { label: "Inhalt", name: "body", widget: "markdown" }
       - {
           label: "Fussnoten",
           name: "footnotes",

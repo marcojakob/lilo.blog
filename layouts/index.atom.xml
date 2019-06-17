@@ -2,7 +2,7 @@
 {{ $settingsDesign := .Site.GetPage "/settings/design" -}}
 {{ $settingsAuthor := .Site.GetPage "/settings/author" -}}
 
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
   <generator uri="{{ .Site.Params.lernblogUrl }}" version="{{ .Site.Params.lernblogVersion }}">{{ .Site.Params.lernblogName }}</generator>
   <copyright>{{ .Site.Copyright }}</copyright>
   <id>{{ .Permalink }}</id>
@@ -15,20 +15,29 @@
   <updated>{{ now.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
   <author>
     <name>{{ $settingsAuthor.Params.name | htmlEscape }}</name>
-    {{- with $settingsAuthor.Params.email }}
-    <email>{{ . | htmlEscape }}</email>
-    {{ end -}}
-    <uri>{{ $settingsAuthor.Params.image | default "/img/default-author.png" | absURL }}</uri>
+    {{- with $settingsAuthor.Params.image  }}
+    <uri>{{ . | absURL }}</uri>
+    {{- end }}
+    <email>{{ $settingsAuthor.Params.email | htmlEscape }}</email>
   </author>
-  <icon>{{ $settingsDesign.Params.icon | default "/img/default-favicon.png" | absURL }}</icon>
-  <logo>{{ $settingsDesign.Params.logo | default "/img/default-logo.png" | absURL }}</logo>
-  <link href="{{ $settingsDesign.Params.image | default "/img/default-image.png" | absURL }}" rel="enclosure" type="image/*" />
+  {{- with $settingsDesign.Params.icon }}
+  <icon>{{ . | absURL }}</icon>
+  {{- end }}
+  {{- with $settingsDesign.Params.logo }}
+  <logo>{{ . | absURL }}</logo>
+  {{- end }}
+  {{- with $settingsDesign.Params.image }}
+  <link href="{{ . | absURL }}" rel="enclosure" type="image/*" />
+  {{- end }}
+  {{- with $settingsDesign.Params.color }}
+  <webfeeds:accentColor>{{ . }}</webfeeds:accentColor>
+  {{- end }}
   {{- range where .Pages "Section" "posts" }}
   <entry>
     <id>{{ .Permalink }}</id>
     <link href="{{ .Permalink }}" />
     <title>{{ .Title | htmlEscape }}</title>
-    <summary>{{ .Description | htmlEscape }}</summary>
+    <summary>{{ .Description | default .Summary | htmlEscape }}</summary>
     <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
     <updated>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
     {{- range .Params.tags }}
@@ -36,7 +45,7 @@
     {{- end }}
     {{- with .Params.image }}
     <link href="{{ . | absURL }}" rel="enclosure" type="image/*" />
-    {{ end }}
+    {{- end }}
   </entry>
   {{- end }}
 </feed>

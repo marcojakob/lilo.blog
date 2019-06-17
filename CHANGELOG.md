@@ -1,7 +1,8 @@
 # Changelog
 
-## Version 1.1.1 (not released)
+## Version 1.2.0 (not released)
 
+- Make post summary optional and fall back to first words of content if no summary is available (see #6).
 - Footnotes on custom pages.
 - Add next and prev meta tags for paginated overview page.
 - Rename "Unterseiten" to "Eigene Seiten".

@@ -16,7 +16,13 @@
       <h2 class="card-title">
         <a href="{{ .RelPermalink }}" class="stretched-link">{{ .Title | truncate 60 }}</a>
       </h2>
-      <div class="card-text">{{ .Description | truncate 160 }}</div>
+      <div class="card-text">
+        {{ if .Params.image }}
+          {{ .Description | default .Summary | truncate 160 }}
+        {{ else }}
+          {{ .Description | default .Summary | truncate 320 }}
+        {{ end }}
+      </div>
     </div>
     <div class="card-footer">
       {{ partial "post_date.html" . }}

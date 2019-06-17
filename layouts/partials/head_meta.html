@@ -2,89 +2,14 @@
 {{ $settingsDesign := .Site.GetPage "/settings/design" -}}
 {{ $settingsAuthor := .Site.GetPage "/settings/author" -}}
 
-<!-- Schema.org JSON-LD markup. -->
-{{ if .IsHome }}
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Blog",
-  "url": {{ .Permalink }},
-  "mainEntityOfPage": {{ .Permalink }},
-  "headline": {{ $settingsGeneral.Title }},
-  "description": {{ $settingsGeneral.Description }},
-  "dateModified": {{ now.Format "2006-01-02T15:04:05-07:00" | safeHTML }},
-  "image": {
-    "@type": "ImageObject",
-    "url": {{ $settingsDesign.Params.image | default "/img/default-image.png" | absURL }}
-  },
-  "author": {
-    "@type": "Person",
-    "name": {{ $settingsAuthor.Params.name }},
-    "image": {
-      "@type": "ImageObject",
-      "url": {{ $settingsAuthor.Params.image | default "/img/default-author.png" | absURL }}
-    }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": {{ $settingsAuthor.Params.name }},
-    "logo": {
-      "@type": "ImageObject",
-      "url": {{ $settingsDesign.Params.logo | default "/img/default-logo.png" | absURL }}
-    }
-  }
-}
-</script>
-{{ else }}
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": {{ if eq .Section "posts" }}"BlogPosting"{{ else }}"Article"{{ end }},
-  "url": {{ .Permalink }},
-  "mainEntityOfPage": {{ .Permalink }},
-  "headline": {{ .Title | default $settingsGeneral.Title }},
-  "description": {{ .Description | default $settingsGeneral.Description }},
-  {{ if .Params.date -}}
-  "datePublished": {{ .Date.Format "2006-01-02" }},
-  {{ end -}}
-  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }},
-  {{ with (partial "asset_url.html" (dict "folder" .RelPermalink "asset" .Params.image)) -}}
-  "image": {
-    "@type": "ImageObject",
-    "url": {{ . | absURL }}
-  },
-  {{ end -}}
-  {{ with .Params.tags -}}
-  "keywords": {{ delimit . "," }},
-  {{ end -}} 
-  "author": {
-    "@type": "Person",
-    "name": {{ $settingsAuthor.Params.name }},
-    "image": {
-      "@type": "ImageObject",
-      "url": {{ $settingsAuthor.Params.image | default "/img/default-author.png" | absURL }}
-    }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": {{ $settingsAuthor.Params.name }},
-    "logo": {
-      "@type": "ImageObject",
-      "url": {{ $settingsDesign.Params.logo | default "/img/default-logo.png" | absURL }}
-    }
-  }
-}
-</script>
-{{ end }}
-
 <meta name="generator" content="{{ .Site.Params.lernblogName }} {{ .Site.Params.lernblogVersion }} - {{ .Site.Params.lernblogUrl }}" />
 <link rel="icon" href="{{ $settingsDesign.Params.icon | default `/img/default-favicon.png` }}">
 <title>{{ with .Title }}{{ . }} | {{ end }}{{ $settingsGeneral.Title }}</title>
-<meta name="description" content="{{ .Description | default $settingsGeneral.Description }}">
+<meta name="description" content="{{ .Description | default .Summary | default $settingsGeneral.Description }}">
 <meta name="author" content="{{ $settingsAuthor.Params.name }}">
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="{{ with .Title }}{{ . }} | {{ end }}{{ $settingsGeneral.Title }}">
-<meta property="og:description" content="{{ .Description | default $settingsGeneral.Description }}">
+<meta property="og:description" content="{{ .Description | default .Summary | default $settingsGeneral.Description }}">
 <meta property="og:url" content="{{ .Permalink }}">
 {{ if .IsHome -}}
 {{ printf `<meta property="og:image" content="%s">` ($settingsDesign.Params.image | default "/img/default-image.png" | absURL) | safeHTML }}
