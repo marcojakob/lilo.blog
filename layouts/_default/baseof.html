@@ -12,9 +12,6 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/main.css" rel="stylesheet">
 
-	<!-- User-defined styles -->
-	{{ partial "head_custom_styles.html" . }}
-	
 	{{ block "head_includes" . }}{{ end }} 
 	{{ with $settingsCode.Params.siteheader }}{{ . | safeHTML }}{{ end }}
 </head>

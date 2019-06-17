@@ -1,7 +1,27 @@
 /* GENERAL */
+.main-color {
+  color: #000 !important;
+  color: var(--main-color) !important;
+}
+
+.main-background {
+  background-color: #000 !important;
+  background-color: var(--main-color) !important;
+}
+
 hr {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+a {
+  color: #000;
+  color: var(--main-color);
+}
+
+a:hover {
+  color: #000;
+  color: var(--main-color);
 }
 
 .btn.focus,
@@ -10,8 +30,12 @@ hr {
 }
 
 .btn-main {
-  color: #fff !important;
   position: relative;
+  color: #fff !important;
+  background-color: #000;
+  background-color: var(--main-color);
+  border-color: #000;
+  border-color: var(--main-color);
 }
 
 .btn-main:hover {
@@ -35,6 +59,20 @@ hr {
   opacity: 0.1;
 }
 
+.btn-outline-main {
+  color: #000;
+  color: var(--main-color) !important;
+  border-color: #000;
+  border-color: var(--main-color);
+  box-shadow: none !important;
+}
+
+.btn-outline-main:hover {
+  color: #fff !important;
+  background-color: #000;
+  background-color: var(--main-color);
+}
+
 .above-stretched-link {
   position: relative;
   z-index: 2;
@@ -44,6 +82,7 @@ hr {
   display: inline-block;
   font-size: inherit;
   height: 1em;
+  max-width: 1.5em; /* for IE */
   overflow: visible;
   vertical-align: -0.125em;
 }
@@ -371,10 +410,13 @@ hr {
 .article-content a {
   color: #000;
   box-shadow: inset 0 -1px 0 #000;
+  box-shadow: inset 0 -1px 0 var(--main-color);
 }
 
 .article-content a:hover {
   text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  color: var(--main-color);
 }
 
 @media (min-width: 768px) {
@@ -433,6 +475,7 @@ hr {
 
 .article-content blockquote {
   border-left: 4px solid #000;
+  border-left-color: var(--main-color);
   padding: 0 20px;
   font-style: italic;
   font-size: 120%;
