@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.2.1 (not released)
+
+- CMS: Make design color optional.
+- Remove prefilled design color.
+
 ## Version 1.2.0 (2019-06-17)
 
 - Make post summary optional and fall back to first words of content if no summary is available (see #6).

@@ -224,6 +224,7 @@ collections:
               label: "Farbe",
               name: "color",
               widget: "string",
+              required: false,
               hint: "Farbe für Links, Zitate, Buttons, etc. (als Hex-Farbcode, z.B. #ff7260)",
               pattern:
                 ["^#[0-9a-fA-F]{3,6}$", "Muss ein gültiger Hex-Farbcode sein"],
