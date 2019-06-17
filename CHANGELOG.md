@@ -8,6 +8,7 @@
 - Rename "Unterseiten" to "Eigene Seiten".
 - Switch CDN for NetlifyCMS because of slow loading times (from jsdelivr to unpkg).
 - Use CSS custom properties to simplify the user defined color.
+- Styling: make some gray texts slightly darker.
 
 ## Version 1.1.0 (2019-06-14)
 

@@ -169,7 +169,7 @@ a:hover {
   padding-top: 1.5rem;
   margin-bottom: 1.5rem;
   font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.44);
+  color: rgba(0, 0, 0, 0.5);
   margin-top: 3rem;
 }
 
@@ -180,7 +180,7 @@ a:hover {
 }
 
 .site-pagination .page-link {
-  color: rgba(0, 0, 0, 0.44);
+  color: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 0 !important;
 }
@@ -222,7 +222,7 @@ a:hover {
 }
 
 .tag-title span {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   display: inline-block;
   padding-bottom: 20px;
   margin-bottom: -1px;
@@ -234,7 +234,7 @@ a:hover {
 }
 
 .tag-description a {
-  color: rgba(0, 0, 0, 0.44) !important;
+  color: rgba(0, 0, 0, 0.5) !important;
 }
 
 /* POST CARDS (HOME) */
@@ -310,7 +310,7 @@ a:hover {
 }
 
 .post-card .card-text {
-  color: rgba(0, 0, 0, 0.44);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 0.95rem;
 }
 
@@ -322,7 +322,7 @@ a:hover {
 
 /* POST */
 .post-date {
-  color: rgba(0, 0, 0, 0.44);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /* POST & PAGE */

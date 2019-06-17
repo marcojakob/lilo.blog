@@ -2,16 +2,12 @@
 title = "Einführung"
 date = "2019-05-28"
 draft = false
-pinned = true
+pinned = false
 tags = [ "Anleitung", "Lernblog" ]
 description = "In diesem Artikel werden Möglichkeiten aufgezeigt für das Verfassen von Blogeinträgen."
 image = "/img/default-image.png"
 footnotes = "Ganz unten an der Seite können zum Beispiel Bildquellen angegeben werden. Dieser Text ist abgetrennt durch eine Linie und etwas kleiner."
 +++
-
-<button class="btn btn-main">Test</button>
-
-<button class="btn btn-outline-main">Test</button>
 
 In diesem Test-Blogeintrag werden Möglichkeiten aufgezeigt für das Verfassen von Blogeinträgen.
 
