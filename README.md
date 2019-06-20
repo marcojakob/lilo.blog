@@ -12,4 +12,4 @@ Dieses Werk und dessen Inhalte sind - sofern nicht anders angegeben - lizenziert
 
 Nennung der Quelle bitte wie folgt:
 
-Lernblog von [lernblog.ch](https://www.lernblog.ch), Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+Vorlage von [lernblog.ch](https://www.lernblog.ch), Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
