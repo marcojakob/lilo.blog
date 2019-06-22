@@ -4,6 +4,7 @@
 
 - CMS: Make design color optional.
 - Remove prefilled design color.
+- LICENSE: More explicit explanation of license.
 
 ## Version 1.2.0 (2019-06-17)
 
