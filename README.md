@@ -21,4 +21,4 @@ Du darfst die Unterlagen also verwenden, kopieren und weiterentwickeln. Dabei mu
 
 So etwa sollte eine Quellenangabe aussehen:
 
-> 📌 Vorlage von [lernblog.ch](https://www.lernblog.ch), Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+📌 Vorlage von [lernblog.ch](https://www.lernblog.ch), Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
