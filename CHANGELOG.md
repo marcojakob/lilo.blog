@@ -1,10 +1,11 @@
 # Changelog
 
-## Version 1.2.1 (not released)
+## (not released)
 
 - CMS: Make design color optional.
 - Remove prefilled design color.
 - LICENSE: More explicit explanation of license.
+- Styling: Better handling of image caption margins.
 
 ## Version 1.2.0 (2019-06-17)
 

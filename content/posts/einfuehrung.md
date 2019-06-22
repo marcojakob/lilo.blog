@@ -13,6 +13,10 @@ In diesem Test-Blogeintrag werden Möglichkeiten aufgezeigt für das Verfassen v
 
 Tipp: Um diesen Blogartikel zu behalten, ohne ihn zu löschen, kann man den **Entwurfsmodus** einschalten.
 
+# Bilder
+
+![Der Alt-Text wird jeweils als Bildunterschrift angezeigt.](/img/default-image.png)
+
 # Überschrift 1
 
 So sieht die grösste Überschrift aus (H1).

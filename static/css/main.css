@@ -509,7 +509,7 @@ a:hover {
 }
 
 .article-content figure {
-  display: inline-block;
+  margin-bottom: 2rem;
 }
 
 .article-content img {
