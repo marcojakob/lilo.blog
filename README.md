@@ -2,8 +2,6 @@
 
 Weitere Informationen zum Lernblog siehe [www.lernblog.ch](https://www.lernblog.ch).
 
-Unter https://lernblog-template.netlify.com/ ist eine Vorschau des Lernblog Templates.
-
 ## Lizenz
 
 Der Lernblog darf und soll weiterverwendet und weiterentwickelt werden. Dieses Werk ist - sofern nicht anders angegeben - lizenziert unter [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0).
