@@ -1,7 +1,8 @@
 # Changelog
 
-## (not released)
+## Version 1.3.0 (2019-06-23)
 
+- BREAKING CHANGE: Remove image from automatically being added to the top of each post. Now the post image is only used in the blog overview and for SEO. This allows more flexibility about images in the post content. 
 - CMS: Make design color optional.
 - Remove prefilled design color.
 - LICENSE: More explicit explanation of license.

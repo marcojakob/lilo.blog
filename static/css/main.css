@@ -391,17 +391,6 @@ a:hover {
   text-decoration: none;
 }
 
-.post-featured-image-wrapper {
-  margin: 0px auto;
-  max-width: 1000px;
-  margin-bottom: 1.5rem;
-}
-
-.post-featured-image {
-  max-width: 100%;
-  height: auto;
-}
-
 /* POST & PAGE CONTENT */
 .article-content {
   color: rgba(0, 0, 0, 0.8);
@@ -497,11 +486,15 @@ a:hover {
   padding: 20px;
 }
 
-.article-content *:not(.highlight):not(pre) code {
+.article-content *:not(.highlight):not(pre) > code {
   background: rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   padding: 3px 4px;
   margin: 0 2px;
+}
+
+.article-content .highlight pre {
+  margin-bottom: 0;
 }
 
 .article-content li {

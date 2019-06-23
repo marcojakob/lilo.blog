@@ -13,10 +13,6 @@ In diesem Test-Blogeintrag werden Möglichkeiten aufgezeigt für das Verfassen v
 
 Tipp: Um diesen Blogartikel zu behalten, ohne ihn zu löschen, kann man den **Entwurfsmodus** einschalten.
 
-# Bilder
-
-![Der Alt-Text wird jeweils als Bildunterschrift angezeigt.](/img/default-image.png)
-
 # Überschrift 1
 
 So sieht die grösste Überschrift aus (H1).
@@ -27,15 +23,11 @@ Dies ist die Überschrift 2 (H2).
 
 ### Überschrift 3
 
-Die Überschrift 3 ist nicht mehr im Menu verfügbar. Wenn man sie verwenden will, muss man in den `Markdown`-Modus wechseln und dort eine Überschrift mit drei Hastags einleiten:
-
-```
-### Überschrift 3
-```
+Die Überschrift 3 ist nicht mehr im Menu verfügbar. Wenn man sie verwenden will, muss man in den `Markdown`-Modus wechseln und dort eine Überschrift mit drei Hastags einleiten: `### Überschrift 3`
 
 #### Überschrift 4
 
-Auch die Überschrift 4 muss im `Markdown`-Modus erstellt werden.
+Auch Überschrift 4 muss im `Markdown`-Modus erstellt werden: `#### Überschrift 4`
 
 # Weitere Textformatierungen
 
@@ -74,6 +66,10 @@ Und so eine nummerierte Liste:
 ## Bilder
 
 Bilder werden mit dem `+`-Symbol eingefügt.
+
+![Der Alt-Text wird jeweils als Bildunterschrift angezeigt.](/img/default-image.png)
+
+**Empfehlung für Bilder**: Meist empfiehlt sich, ein Bild ganz zuoberst im `Inhalt`-Feld einzufügen. Zusätzlich sollte man dieses auch im `Bild`-Feld angeben, damit es in der Blogübersicht erscheint. 
 
 ### Tipps zu Bildgrössen
 
