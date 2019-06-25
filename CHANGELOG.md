@@ -1,5 +1,9 @@
 # Changelog
 
+## (not released)
+
+- CMS: Set tags to optional to make it clear for the user that it is not necessary. 
+
 ## Version 1.3.0 (2019-06-23)
 
 - BREAKING CHANGE: Remove image from automatically being added to the top of each post. Now the post image is only used in the blog overview and for SEO. This allows more flexibility about images in the post content. 
