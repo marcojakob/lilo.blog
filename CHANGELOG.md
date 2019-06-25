@@ -2,7 +2,9 @@
 
 ## (not released)
 
-- CMS: Set tags to optional to make it clear for the user that it is not necessary. 
+- CMS: Set tags to optional to make it clear for the user that it is not necessary.
+- CMS: Remove previews and preview styles.
+- CMS: Add a preview path and display url.
 
 ## Version 1.3.0 (2019-06-23)
 

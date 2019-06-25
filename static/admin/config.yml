@@ -4,6 +4,9 @@ backend:
 media_folder: "content/img"
 public_folder: "img"
 
+site_url: "/"
+display_url: "https://lernblog.ch"
+
 collections:
   - label: "Blogeinträge"
     label_singular: "Blogeintrag"
@@ -11,6 +14,9 @@ collections:
       Hier können Blogeinträge verfasst, editiert und gelöscht werden.
       Blogeinträge erscheinen in der Übersicht auf der Frontseite.
     name: "posts"
+    preview_path: "{{slug}}/"
+    editor:
+      preview: false
     folder: "content/posts"
     create: true
     format: toml-frontmatter
@@ -84,6 +90,9 @@ collections:
       Einstellungen/Navigation hinzugefügt wird, dann ist die Seite über die 
       Navigation erreichbar.
     name: "pages"
+    preview_path: "{{slug}}/"
+    editor:
+      preview: false
     folder: "content/pages"
     create: true
     format: "toml-frontmatter"
