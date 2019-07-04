@@ -1,6 +1,6 @@
 # Changelog
 
-## (not released)
+## Version 1.3.1 (2019-07-04)
 
 - CMS: Set tags to optional to make it clear for the user that it is not necessary.
 - CMS: Remove previews and preview styles.
