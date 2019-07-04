@@ -6,6 +6,7 @@
 - CMS: Remove previews and preview styles.
 - CMS: Add a preview path and display url.
 - CMS: Remove Netlify identity widget from home page.
+- BUG: Deactivate tags validation because of a NetlifyCMS bug (also see #4).
 
 ## Version 1.3.0 (2019-06-23)
 
