@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.3.2 (2019-08-03)
+
+- General Settings: Remove Facebook/Twitter from footer, change default subtitle. 
+
 ## Version 1.3.1 (2019-07-04)
 
 - CMS: Set tags to optional to make it clear for the user that it is not necessary.
