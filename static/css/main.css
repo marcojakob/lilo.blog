@@ -472,8 +472,11 @@ a:hover {
 }
 
 .article-content p,
-.article-content blockquote {
-  margin: 0 0 1.5rem 0;
+.article-content blockquote,
+.article-content dl,
+.article-content ol,
+.article-content ul {
+  margin-bottom: 1.5rem;
 }
 
 .article-content blockquote cite {

@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.3.3 (2019-08-29)
+
+- Design: Same bottom margin on lists as on paragraphs.
+
 ## Version 1.3.2 (2019-08-03)
 
 - General Settings: Remove Facebook/Twitter from footer, change default subtitle. 
