@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.3.4 (2019-09-04)
+
+- CMS: Add warning message to tags that `#` are not allowed.
+
 ## Version 1.3.3 (2019-08-29)
 
 - Design: Same bottom margin on lists as on paragraphs.

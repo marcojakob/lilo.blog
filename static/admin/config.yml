@@ -58,7 +58,7 @@ collections:
           #     "^[^\\s#]+$",
           #     "Darf keine Leerschläge oder # enthalten. Bitte mehrere Tags durch Komma trennen.",
           #   ],
-          hint: "Tags sind hilfreich, damit Besucher nach diesen filtern können. Mehrere Tags durch Komma trennen.",
+          hint: "Achtung: Darf keine Leerschläge oder # enthalten! Tags sind hilfreich, damit Besucher nach diesen filtern können. Mehrere Tags durch Komma trennen.",
         }
       - {
           label: "Bild",
