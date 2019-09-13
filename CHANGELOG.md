@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.3.5 (2019-09-13)
+
+- Design: Add `margin-bottom` to div elements in article content (used for [Video embeds](https://getbootstrap.com/docs/4.1/utilities/embed/)).
+
 ## Version 1.3.4 (2019-09-04)
 
 - CMS: Add warning message to tags that `#` are not allowed.

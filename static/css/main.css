@@ -479,6 +479,10 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
+.article-content > div {
+  margin-bottom: 1.5rem;
+}
+
 .article-content blockquote cite {
   font-size: 83.333333333333%;
 }
