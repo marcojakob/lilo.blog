@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.3.7 (2020-02-15)
+
+- Hugo's new Markdown library (Golmark) does not allow inline HTML by default. We turn this on with `unsafe = true`.
+
 ## Version 1.3.6 (2020-02-15)
 
 - Update to Hugo v0.64.1.

@@ -10,7 +10,7 @@ copyright = "2019 by lernblog.ch - Creative Commons Attribution-ShareAlike 4.0"
 
 [params]
 lernblogName = "Lernblog"
-lernblogVersion = "1.3.6"
+lernblogVersion = "1.3.7"
 lernblogUrl = "https://www.lernblog.ch"
 
 [permalinks]
@@ -31,3 +31,5 @@ mediaType = "application/atom+xml"
 baseName = "index"
 isPlainText = false
 
+[markup.goldmark.renderer]
+unsafe= true
