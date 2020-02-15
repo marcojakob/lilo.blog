@@ -1,6 +1,6 @@
 {{ define "head_meta_includes" -}}
-{{ $posts := where (where .Pages "Section" "posts") "Params.pinned" "!=" true -}}
-{{ $posts := $posts | union (where (where .Pages "Section" "posts") "Params.pinned" true) -}}
+{{ $posts := where (where .Site.Pages "Section" "posts") "Params.pinned" "!=" true -}}
+{{ $posts := $posts | union (where (where .Site.Pages "Section" "posts") "Params.pinned" true) -}}
 {{ $paginator := .Paginate $posts -}}
 {{ .Scratch.Set "paginator" $paginator -}}
 

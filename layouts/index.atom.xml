@@ -32,7 +32,7 @@
   {{- with $settingsDesign.Params.color }}
   <webfeeds:accentColor>{{ . }}</webfeeds:accentColor>
   {{- end }}
-  {{- range where .Pages "Section" "posts" }}
+  {{- range where .Site.Pages "Section" "posts" }}
   <entry>
     <id>{{ .Permalink }}</id>
     <link href="{{ .Permalink }}" />
