@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.3.6 (2020-02-15)
+
+- Update to Hugo v0.64.1.
+- Use `.Site.Pages` instead of `.Pages` to find pages in specific sections.
+- Fix image links (public folder). It must start with a slash to be absolute in new NetlifyCMS version.
+
+
 ## Version 1.3.5 (2019-09-13)
 
 - Design: Add `margin-bottom` to div elements in article content (used for [Video embeds](https://getbootstrap.com/docs/4.1/utilities/embed/)).
