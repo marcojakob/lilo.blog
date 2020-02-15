@@ -5,6 +5,7 @@
 - Update to Hugo v0.64.1.
 - Use `.Site.Pages` instead of `.Pages` to find pages in specific sections.
 - Fix image links (public folder). It must start with a slash to be absolute in new NetlifyCMS version.
+- Link from taxonomy terms page to home.
 
 
 ## Version 1.3.5 (2019-09-13)
