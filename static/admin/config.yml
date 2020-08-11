@@ -22,7 +22,7 @@ collections:
     media_folder: "" # Stores media relative to content.
     public_folder: ""
     create: true
-    format: toml-frontmatter
+    format: "toml-frontmatter"
     fields:
       - {
           name: "title",
@@ -85,8 +85,8 @@ collections:
           media_library: { config: { max_file_size: 512000 } },
         }
       - {
-          label: "Fussnoten",
           name: "footnotes",
+          label: "Fussnoten",
           widget: "markdown",
           minimal: true,
           buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
@@ -106,6 +106,7 @@ collections:
     editor:
       preview: false
     folder: "content/pages"
+    path: "{{slug}}/index"
     media_folder: "" # Stores media relative to content.
     public_folder: ""
     create: true
