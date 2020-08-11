@@ -1,5 +1,20 @@
 # Changelog
 
+## Version 1.4.0 (2020-08-11)
+
+- BREAKING: Organize content in subfolders (keeps images together with content).
+- BREAKING: Rename `content/img` to `content/media` (may contain other assets than images like pdf files).
+- Update to Hugo v0.74.3.
+- Update to Bootstrap v4.5.2 
+- Update to medium-zoom v1.0.6
+- Update to jQuery v3.5.1
+- Improve styling of blockquote. Now supports adding of a footer for source or author.
+- CMS: Re-add warning message to tags that `#` are not allowed.
+- CMS: Content footnotes as slimmed down markdown editor.
+- CMS: Allow the use of Netlify identity login (redirect from home to /admin/ for initial password setup).
+- CMS: Add image upload size limit.
+- Deploy to Netlify button (see README).
+
 ## Version 1.3.7 (2020-02-15)
 
 - Hugo's new Markdown library (Golmark) does not allow inline HTML by default. We turn this on with `unsafe = true`.
@@ -11,14 +26,13 @@
 - Fix image links (public folder). It must start with a slash to be absolute in new NetlifyCMS version.
 - Link from taxonomy terms page to home.
 
-
 ## Version 1.3.5 (2019-09-13)
 
 - Design: Add `margin-bottom` to div elements in article content (used for [Video embeds](https://getbootstrap.com/docs/4.1/utilities/embed/)).
 
 ## Version 1.3.4 (2019-09-04)
 
-- CMS: Add warning message to tags that `#` are not allowed.
+- CMS: Add warning message to tags that `#` are not allowed (had to be removed again).
 
 ## Version 1.3.3 (2019-08-29)
 
@@ -26,7 +40,7 @@
 
 ## Version 1.3.2 (2019-08-03)
 
-- General Settings: Remove Facebook/Twitter from footer, change default subtitle. 
+- General Settings: Remove Facebook/Twitter from footer, change default subtitle.
 
 ## Version 1.3.1 (2019-07-04)
 
@@ -38,7 +52,7 @@
 
 ## Version 1.3.0 (2019-06-23)
 
-- BREAKING CHANGE: Remove image from automatically being added to the top of each post. Now the post image is only used in the blog overview and for SEO. This allows more flexibility about images in the post content. 
+- BREAKING CHANGE: Remove image from automatically being added to the top of each post. Now the post image is only used in the blog overview and for SEO. This allows more flexibility about images in the post content.
 - CMS: Make design color optional.
 - Remove prefilled design color.
 - LICENSE: More explicit explanation of license.

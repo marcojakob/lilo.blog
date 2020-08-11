@@ -8,49 +8,52 @@ site_url: "/"
 display_url: "https://lernblog.ch"
 
 collections:
-  - label: "Blogeinträge"
+  - name: "posts"
+    label: "Blogeinträge"
     label_singular: "Blogeintrag"
     description: >
       Hier können Blogeinträge verfasst, editiert und gelöscht werden.
       Blogeinträge erscheinen in der Übersicht auf der Frontseite.
-    name: "posts"
     preview_path: "{{slug}}/"
     editor:
       preview: false
     folder: "content/posts"
+    path: "{{slug}}/index"
+    media_folder: "" # Stores media relative to content.
+    public_folder: ""
     create: true
     format: toml-frontmatter
     fields:
       - {
-          label: "Titel",
           name: "title",
+          label: "Titel",
           widget: "string",
           hint: "Beim ersten Speichern wird der Titel zur URL des Blogartikels.",
         }
       - {
-          label: "Datum",
           name: "date",
+          label: "Datum",
           widget: "date",
           format: "YYYY-MM-DD",
           dateFormat: "DD.MM.YYYY",
         }
       - {
-          label: "Entwurfsmodus",
           name: "draft",
+          label: "Entwurfsmodus",
           widget: "boolean",
           hint: "Einträge im Entwurfsmodus werden nicht angezeigt.",
           default: false,
         }
       - {
-          label: "Anheften",
           name: "pinned",
+          label: "Anheften",
           widget: "boolean",
           hint: "Angeheftete Einträge werden zuoberst vor den neusten Einträgen angezeigt.",
           default: false,
         }
       - {
-          label: "Tags",
           name: "tags",
+          label: "Tags",
           widget: "list",
           required: false,
           pattern:
@@ -61,74 +64,99 @@ collections:
           hint: "Tags sind hilfreich, damit Besucher nach diesen filtern können. Mehrere Tags durch Komma trennen. Achtung: Darf keine Leerschläge oder # enthalten!",
         }
       - {
-          label: "Bild",
           name: "image",
+          label: "Bild",
           widget: "image",
           required: false,
           hint: "Bild für Blogübersicht, Suchmaschinen und Social Media.",
+          media_library: { config: { max_file_size: 256000 } },
         }
       - {
-          label: "Zusammenfassung",
           name: "description",
+          label: "Zusammenfassung",
           widget: "text",
           required: false,
           hint: "Kurze Beschreibung für Blogübersicht, Suchmaschinen und Social Media (ca. 2 Sätze).",
         }
-      - { label: "Inhalt", name: "body", widget: "markdown" }
+      - {
+          name: "body",
+          label: "Inhalt",
+          widget: "markdown",
+          media_library: { config: { max_file_size: 512000 } },
+        }
       - {
           label: "Fussnoten",
           name: "footnotes",
-          widget: "text",
+          widget: "markdown",
+          minimal: true,
+          buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
+          editorComponents: [],
           required: false,
           hint: "Kann für Quellenangaben oder andere Hinweise verwendet werden.",
         }
-  - label: "Eigene Seiten"
+  - name: "pages"
+    label: "Eigene Seiten"
     label_singular: "Seite"
     description: >
       Eigene Seiten erscheinen nicht in der Übersicht mit den Blogeinträgen auf der 
       Frontseite. Sie werden durch einen direkten Link aufgerufen. Wenn der Link unter 
       Einstellungen/Navigation hinzugefügt wird, dann ist die Seite über die 
       Navigation erreichbar.
-    name: "pages"
     preview_path: "{{slug}}/"
     editor:
       preview: false
     folder: "content/pages"
+    media_folder: "" # Stores media relative to content.
+    public_folder: ""
     create: true
     format: "toml-frontmatter"
     fields:
-      - { label: "Titel", name: "title", widget: "string" }
       - {
-          label: "Entwurfsmodus",
+          name: "title",
+          label: "Titel",
+          widget: "string",
+          hint: "Beim ersten Speichern wird der Titel zur URL.",
+        }
+      - {
           name: "draft",
+          label: "Entwurfsmodus",
           widget: "boolean",
           hint: "Seiten im Entwurfsmodus werden nicht angezeigt.",
           default: false,
         }
       - {
-          label: "Bild",
           name: "image",
+          label: "Bild",
           widget: "image",
           required: false,
           hint: "Bild für Suchmaschinen und Social Media.",
+          media_library: { config: { max_file_size: 256000 } },
         }
       - {
-          label: "Zusammenfassung",
           name: "description",
+          label: "Zusammenfassung",
           widget: "text",
           required: false,
           hint: "Kurze Beschreibung für Suchmaschinen und Social Media (ca. 2 Sätze).",
         }
-      - { label: "Inhalt", name: "body", widget: "markdown" }
       - {
-          label: "Fussnoten",
+          name: "body",
+          label: "Inhalt",
+          widget: "markdown",
+          media_library: { config: { max_file_size: 512000 } },
+        }
+      - {
           name: "footnotes",
-          widget: "text",
+          label: "Fussnoten",
+          widget: "markdown",
+          minimal: true,
+          buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
+          editorComponents: [],
           required: false,
           hint: "Kann für Quellenangaben oder andere Hinweise verwendet werden.",
         }
-  - label: "Einstellungen"
-    name: "settings"
+  - name: "settings"
+    label: "Einstellungen"
     delete: false
     editor:
       preview: false
@@ -139,34 +167,42 @@ collections:
         file: "content/settings/general/index.md"
         fields:
           - {
-              label: "Headless",
               name: "headless",
+              label: "Headless",
               widget: "hidden",
               default: "true",
             }
           - {
-              label: Seitentitel,
               name: title,
+              label: Seitentitel,
               widget: string,
               hint: "Haupttitel der Website.",
             }
           - {
-              label: "Beschreibung",
               name: "description",
+              label: "Beschreibung",
               widget: "string",
               hint: "Eine kurze Beschreibung der Website (Tagline).",
             }
           - {
-              label: "Fusszeile links",
               name: "footerLeft",
+              label: "Fusszeile links",
               widget: "markdown",
+              minimal: true,
+              buttons:
+                ["bold", "italic", "link", "bulleted-list", "numbered-list"],
+              editorComponents: [],
               required: false,
               hint: "Fusszeile ganz unten links an der Seite.",
             }
           - {
-              label: "Fusszeile rechts",
               name: "footerRight",
+              label: "Fusszeile rechts",
               widget: "markdown",
+              minimal: true,
+              buttons:
+                ["bold", "italic", "link", "bulleted-list", "numbered-list"],
+              editorComponents: [],
               required: false,
               hint: "Fusszeile ganz unten rechts an der Seite.",
             }
@@ -192,6 +228,7 @@ collections:
               widget: "image",
               required: false,
               hint: "Kleines Bild (muss quadratisch sein).",
+              media_library: { config: { max_file_size: 256000 } },
             }
           - {
               label: "E-Mail",
@@ -199,8 +236,8 @@ collections:
               widget: "string",
               hint: "Deine E-Mail-Adresse. Diese wird verwendet, um dich als Autor erreichen zu können (z.B. für die Lernblog-Plattform).",
             }
-      - label: "Design"
-        name: "design"
+      - name: "design"
+        label: "Design"
         file: "content/settings/design/index.md"
         fields:
           - {
@@ -215,6 +252,7 @@ collections:
               widget: image,
               required: false,
               hint: "Kleines, quadratisches Bild für das Browser-Tab.",
+              media_library: { config: { max_file_size: 256000 } },
             }
           - {
               label: Logo,
@@ -222,6 +260,7 @@ collections:
               widget: image,
               required: false,
               hint: "Kleines Logo für die Navigation.",
+              media_library: { config: { max_file_size: 256000 } },
             }
           - {
               label: Hauptbild,
@@ -229,6 +268,7 @@ collections:
               widget: image,
               required: false,
               hint: "Hintergrundbild für die Startseite.",
+              media_library: { config: { max_file_size: 512000 } },
             }
           - {
               label: "Farbe",
@@ -239,8 +279,8 @@ collections:
               pattern:
                 ["^#[0-9a-fA-F]{3,6}$", "Muss ein gültiger Hex-Farbcode sein"],
             }
-      - label: "Navigation"
-        name: "navigation"
+      - name: "navigation"
+        label: "Navigation"
         file: "content/settings/navigation/index.md"
         fields:
           - {
@@ -260,8 +300,8 @@ collections:
                   { label: URL, name: url, widget: string },
                 ],
             }
-      - label: "Code (für Profis)"
-        name: "code"
+      - name: "code"
+        label: "Code (für Profis)"
         file: "content/settings/code/index.md"
         fields:
           - {
