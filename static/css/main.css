@@ -471,6 +471,15 @@ a:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
+.article-content blockquote footer {
+  font-size: 80%;
+  margin-top: -1.5rem;
+}
+
+.article-content blockquote footer::before {
+  content: "\2014\00A0";
+}
+
 .article-content p,
 .article-content blockquote,
 .article-content dl,
@@ -481,10 +490,6 @@ a:hover {
 
 .article-content > div {
   margin-bottom: 1.5rem;
-}
-
-.article-content blockquote cite {
-  font-size: 83.333333333333%;
 }
 
 .article-content > pre {
