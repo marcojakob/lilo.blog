@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
 
-media_folder: "content/img"
-public_folder: "/img"
+media_folder: "content/media"
+public_folder: "/media"
 
 site_url: "/"
 display_url: "https://lernblog.ch"
