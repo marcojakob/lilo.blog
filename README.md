@@ -2,7 +2,7 @@
 
 Einen eigenen Lernblog erstellen per Knopfdruck:
 
-<a href="https://app.netlify.com/start/deploy?repository=marcojakob/lernblog&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/marcojakob/lernblog&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 Weitere Informationen zum Lernblog siehe [www.lernblog.ch](https://www.lernblog.ch).
 
