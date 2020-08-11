@@ -44,3 +44,23 @@
 	{{ partial "pagination.html" . }}
 </main>
 {{ end }}
+
+{{ define "head_includes" }}
+{{/* Used to redirect the user during Netlify sign up or log in. See also script in body_includes. */}}
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{{ end }}
+
+{{ define "body_includes" }}
+{{/* Used to redirect the user during Netlify sign up or log in. See also script in head_includes. */}}
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+{{ end }}
