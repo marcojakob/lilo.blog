@@ -46,8 +46,6 @@ asdf
 
 > «Zitate können hervorgehoben werden.»
 >
-> «asldfajsldf alskdfj alksd Zitate können hervorgehoben werden.»
-> 
 > *Autor mit [Link zur Quelle](https://www.lernblog.ch)*
 
 Die Fusszeile mit Quellenangabe muss mit HTML geschrieben. Am besten dazu in den `Markdown`-Modus wechseln. 
