@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Version 1.4.1 (2020-08-12)
 
 - Change preview path to home URL. The slug does not work correctly with the new folder structure.
 - Use last italic <em> element in blockquotes for blockquote footer.
