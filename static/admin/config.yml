@@ -14,7 +14,7 @@ collections:
     description: >
       Hier können Blogeinträge verfasst, editiert und gelöscht werden.
       Blogeinträge erscheinen in der Übersicht auf der Frontseite.
-    preview_path: "{{slug}}/"
+    preview_path: "/"
     editor:
       preview: false
     folder: "content/posts"
@@ -102,7 +102,7 @@ collections:
       Frontseite. Sie werden durch einen direkten Link aufgerufen. Wenn der Link unter 
       Einstellungen/Navigation hinzugefügt wird, dann ist die Seite über die 
       Navigation erreichbar.
-    preview_path: "{{slug}}/"
+    preview_path: "/"
     editor:
       preview: false
     folder: "content/pages"

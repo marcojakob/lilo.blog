@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Change preview path to home URL. The slug does not work correctly with the new folder structure.
+
 ## Version 1.4.0 (2020-08-11)
 
 - BREAKING: Organize content in subfolders (keeps images together with content).
@@ -17,7 +21,7 @@
 
 ## Version 1.3.7 (2020-02-15)
 
-- Hugo's new Markdown library (Golmark) does not allow inline HTML by default. We turn this on with `unsafe = true`.
+- Hugo's new Markdown library (Goldmark) does not allow inline HTML by default. We turn this on with `unsafe = true`.
 
 ## Version 1.3.6 (2020-02-15)
 
