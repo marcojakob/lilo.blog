@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Change preview path to home URL. The slug does not work correctly with the new folder structure.
+- Use last italic <em> element in blockquotes for blockquote footer.
 
 ## Version 1.4.0 (2020-08-11)
 

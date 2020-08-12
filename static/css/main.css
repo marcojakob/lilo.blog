@@ -471,12 +471,19 @@ a:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.article-content blockquote footer {
-  font-size: 80%;
-  margin-top: -1.5rem;
+.article-content blockquote a {
+  color: rgba(0, 0, 0, 0.5);
 }
 
-.article-content blockquote footer::before {
+.article-content blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+.article-content blockquote p:last-child > em {
+  font-size: 80%;
+}
+
+.article-content blockquote p:last-child > em::before {
   content: "\2014\00A0";
 }
 
