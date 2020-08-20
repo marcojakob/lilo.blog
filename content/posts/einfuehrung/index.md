@@ -4,15 +4,10 @@ date = "2019-05-28"
 draft = false
 pinned = false
 tags = ["Anleitung", "Lernblog"]
-image = "cat2.jpg"
+image = "/img/default-image.png"
 description = "In diesem Artikel werden Möglichkeiten aufgezeigt für das Verfassen von Blogeinträgen."
 footnotes = "Ganz unten an der Seite können zum Beispiel Bildquellen angegeben werden. Dieser Text ist abgetrennt durch eine Linie und etwas kleiner."
 +++
-![](cat2.jpg)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4hu52houcVY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 
 In diesem Test-Blogeintrag werden Möglichkeiten aufgezeigt für das Verfassen von Blogeinträgen.
 
