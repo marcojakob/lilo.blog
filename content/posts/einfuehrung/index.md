@@ -43,13 +43,11 @@ Natürlich gibt es auch **fett** und *kursiv*.
 
 ## Zitate
 
-asdf
-
 > «Zitate können hervorgehoben werden.»
 >
 > *Autor mit [Link zur Quelle](https://www.lernblog.ch)*
 
-Die Fusszeile mit Quellenangabe muss mit HTML geschrieben. Am besten dazu in den `Markdown`-Modus wechseln. 
+Die Quellenangabe muss *kursiv* geschrieben werden, damit sie als Fusszeile erkannt wird. 
 
 ## Liste
 
