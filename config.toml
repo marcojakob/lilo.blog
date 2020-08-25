@@ -10,7 +10,7 @@ copyright = "2019 by lernblog.ch - Creative Commons Attribution-ShareAlike 4.0"
 
 [params]
 lernblogName = "Lernblog"
-lernblogVersion = "1.4.1"
+lernblogVersion = "1.4.2"
 lernblogUrl = "https://www.lernblog.ch"
 
 [permalinks]

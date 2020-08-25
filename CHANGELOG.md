@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.4.2 (2020-08-25)
+
+- CMS: Make E-Mail optional for author settings.
+
 ## Version 1.4.1 (2020-08-12)
 
 - Change preview path to home URL. The slug does not work correctly with the new folder structure.

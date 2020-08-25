@@ -235,6 +235,7 @@ collections:
               label: "E-Mail",
               name: "email",
               widget: "string",
+              required: false,
               hint: "Deine E-Mail-Adresse. Diese wird verwendet, um dich als Autor erreichen zu können (z.B. für die Lernblog-Plattform).",
             }
       - name: "design"
