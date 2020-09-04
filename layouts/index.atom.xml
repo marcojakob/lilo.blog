@@ -43,11 +43,9 @@
     {{- range .Params.tags }}
     <category term="{{ . | urlize }}" label="{{ . | htmlEscape }}" scheme="{{ partial `tag_url.html` (dict `context` $ `tag` .) | absURL }}" />
     {{- end }}
-    {{- with .Params.image }}
-    <link href="{{ . | absURL }}" rel="enclosure" type="image/*" />
+    {{- if .Params.image }}
+    <link href="{{ partial `asset_url.html` (dict `folder` .RelPermalink `asset` .Params.image) | absURL }}" rel="enclosure" type="image/*" />
     {{- end }}
   </entry>
   {{- end }}
 </feed>
-
-  

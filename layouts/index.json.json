@@ -43,8 +43,8 @@
       "url": "{{ $e.Permalink }}",
       "title": {{ $e.Title | jsonify }},
       "summary": {{ $e.Description | default $e.Summary | jsonify }},
-      {{- with $e.Params.image }}
-      "image": "{{ . | absURL }}",
+      {{- if $e.Params.image }}
+      "image": "{{ partial `asset_url.html` (dict `folder` $e.RelPermalink `asset` $e.Params.image) | absURL }}",
       {{- end }}
       "date_published": "{{ $e.Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
       "date_updated": "{{ $e.Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",

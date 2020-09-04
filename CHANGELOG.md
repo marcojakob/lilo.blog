@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.4.3 (2020-08-05)
+
+- Fix image urls in RSS and JSON Feeds.
+
 ## Version 1.4.2 (2020-08-25)
 
 - CMS: Make E-Mail optional for author settings.
