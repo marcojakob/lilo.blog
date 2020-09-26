@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.4.4 (2020-09-26)
+
+- Update Hugo to v0.75.1
+- Remove `disableFastRender` in the Hugo config.
+
 ## Version 1.4.3 (2020-08-05)
 
 - Fix image urls in RSS and JSON Feeds.
