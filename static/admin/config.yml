@@ -7,6 +7,10 @@ public_folder: "/media"
 site_url: "/"
 display_url: "https://lernblog.ch"
 
+slug:
+  encoding: "ascii" # Only allows characters (0-9, a-z, A-Z, _, -, ~)
+  clean_accents: true # Remove diacritics before sanitizing
+
 collections:
   - name: "posts"
     label: "Blogeinträge"
