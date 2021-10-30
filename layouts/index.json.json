@@ -5,15 +5,15 @@
 {
   "version": "https://jsonfeed.org/version/1",
   "_lernblog": {
-    "about": "{{ .Site.Params.lernblogUrl }}",
-    "version": "{{ .Site.Params.lernblogVersion }}",
+    "about": "{{ .Site.Params.learnblogUrl }}",
+    "version": "{{ .Site.Params.learnblogVersion }}",
     "copyright": "{{ .Site.Copyright }}"
   },
   "title": {{ $settingsGeneral.Title | jsonify }},
   "home_page_url": "{{ .Site.BaseURL }}",
   "feed_url": "{{ "index.json" | absURL }}",
   "description": {{ $settingsGeneral.Description | jsonify }},
-  "user_comment": "{{ .Site.Params.lernblogName }} {{ .Site.Params.lernblogVersion }} - {{ .Site.Params.lernblogUrl }}",
+  "user_comment": "{{ .Site.Params.learnblogName }} {{ .Site.Params.learnblogVersion }} - {{ .Site.Params.learnblogUrl }}",
   {{- with $settingsDesign.Params.logo }}
   "icon": "{{ . | absURL }}",
   {{- end }}

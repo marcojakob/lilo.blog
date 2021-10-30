@@ -8,6 +8,6 @@ image = ""
 
 ## Vorname Nachname
 
-info@lernblog.ch
+info@learnblog.org
 
 Beschreibung, wer ich bin...

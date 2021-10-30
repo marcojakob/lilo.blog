@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 2.0.0 (UNRELEASED)
+
+- Change from lernblog.ch to learnblog.org.
+- No emojis and other non-Latin characters in slug.
+
 ## Version 1.4.4 (2020-09-26)
 
 - Update Hugo to v0.75.1

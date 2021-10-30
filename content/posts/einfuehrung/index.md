@@ -3,7 +3,7 @@ title = "Einführung"
 date = "2019-05-28"
 draft = false
 pinned = false
-tags = ["Anleitung", "Lernblog"]
+tags = ["Anleitung", "Learnblog"]
 image = "/img/default-image.png"
 description = "In diesem Artikel werden Möglichkeiten aufgezeigt für das Verfassen von Blogeinträgen."
 footnotes = "Ganz unten an der Seite können zum Beispiel Bildquellen angegeben werden. Dieser Text ist abgetrennt durch eine Linie und etwas kleiner."
@@ -39,13 +39,13 @@ Natürlich gibt es auch **fett** und *kursiv*.
 
 ## Links
 
-[So können Links angegeben werden](https://www.lernblog.ch). Wenn man in den `Markdown`-Modus wechselt, sieht man auch, welcher Link hinterlegt worden ist.
+[So können Links angegeben werden](https://www.learnblog.org). Wenn man in den `Markdown`-Modus wechselt, sieht man auch, welcher Link hinterlegt worden ist.
 
 ## Zitate
 
 > «Zitate können hervorgehoben werden.»
 >
-> *Autor mit [Link zur Quelle](https://www.lernblog.ch)*
+> *Autor mit [Link zur Quelle](https://www.learnblog.org)*
 
 Die Quellenangabe muss *kursiv* geschrieben werden, damit sie als Fusszeile erkannt wird. 
 
@@ -109,4 +109,4 @@ Damit können zum Beispiel Filme oder Karten eingebettet werden. Meist sind auf 
 
 # Spass haben
 
-😀 Viel Spass mit deinem Lernblog!
+😀 Viel Spass mit deinem Learnblog!

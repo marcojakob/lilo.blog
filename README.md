@@ -1,14 +1,14 @@
-# Lernblog
+# Learnblog
 
-Einen eigenen Lernblog erstellen per Knopfdruck:
+Einen eigenen Learnblog erstellen per Knopfdruck:
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/marcojakob/lernblog&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/marcojakob/learnblog&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
-Weitere Informationen zum Lernblog siehe [www.lernblog.ch](https://www.lernblog.ch).
+Weitere Informationen zum Learnblog siehe [www.learnblog.org](https://www.learnblog.org).
 
 ## Lizenz
 
-Der Lernblog darf und soll weiterverwendet und weiterentwickelt werden. Dieses Werk ist - sofern nicht anders angegeben - lizenziert unter [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0).
+Der Learnblog darf und soll weiterverwendet und weiterentwickelt werden. Dieses Werk ist - sofern nicht anders angegeben - lizenziert unter [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0).
 
 ### Was bedeutet die Lizenz konkret?
 
@@ -17,10 +17,10 @@ Diese Lizenz drückt zwei Aspekte aus, die uns wichtig sind:
 - **Attribution**: Wertschätzung und Dank ausdrücken für die Leute, von denen wir etwas empfangen haben.
 - **ShareAlike**: Das, was wir grosszügig von anderen empfangen haben, geben wir im gleichen Sinn wieder weiter.
 
-Du darfst die Unterlagen also verwenden, kopieren und weiterentwickeln. Dabei musst du einfach die Autoren nennen, die die Unterlagen erstellt haben (Attribution). Bitte jeweils den Link auf [lernblog.ch](https://www.lernblog.ch) angeben. Und wenn du die Unterlagen weiterentwickelst, dann musst du diese wieder unter den gleichen Bedingungen anderen zur Verfügung stellen (ShareAlike).
+Du darfst die Unterlagen also verwenden, kopieren und weiterentwickeln. Dabei musst du einfach die Autoren nennen, die die Unterlagen erstellt haben (Attribution). Bitte jeweils den Link auf [learnblog.org](https://www.learnblog.org) angeben. Und wenn du die Unterlagen weiterentwickelst, dann musst du diese wieder unter den gleichen Bedingungen anderen zur Verfügung stellen (ShareAlike).
 
 ### Quellenangabe
 
 So etwa sollte eine Quellenangabe aussehen:
 
-📌 Vorlage von [lernblog.ch](https://www.lernblog.ch), Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+📌 Vorlage von [learnblog.org](https://www.learnblog.org), Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
