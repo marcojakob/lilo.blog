@@ -94,6 +94,10 @@ a:hover {
   transition: top 0.2s ease-in-out;
 }
 
+.site-nav .navbar-nav .nav-link {
+  color: rgba(0 ,0 ,0 , 0.55);
+}
+
 .site-nav .navbar-brand {
   font-weight: 500;
 }
@@ -169,7 +173,7 @@ a:hover {
   padding-top: 1.5rem;
   margin-bottom: 1.5rem;
   font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.55);
   margin-top: 3rem;
 }
 
@@ -180,7 +184,7 @@ a:hover {
 }
 
 .site-pagination .page-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.55);
   border: none;
   border-radius: 0 !important;
 }
@@ -222,7 +226,7 @@ a:hover {
 }
 
 .tag-title span {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.55);
   display: inline-block;
   padding-bottom: 20px;
   margin-bottom: -1px;
@@ -234,7 +238,7 @@ a:hover {
 }
 
 .tag-description a {
-  color: rgba(0, 0, 0, 0.5) !important;
+  color: rgba(0, 0, 0, 0.55) !important;
 }
 
 /* POST CARDS (HOME) */
@@ -310,7 +314,7 @@ a:hover {
 }
 
 .post-card .card-text {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.55);
   font-size: 0.95rem;
 }
 
@@ -322,7 +326,7 @@ a:hover {
 
 /* POST */
 .post-date {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.55);
 }
 
 /* POST & PAGE */
@@ -365,30 +369,6 @@ a:hover {
   content: "·";
   margin-left: 3px;
   margin-right: 3px;
-}
-
-.post-meta ul.tags {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 2rem;
-  margin-bottom: 0;
-}
-
-.post-meta ul.tags li {
-  display: inline-block;
-  font-size: 0.9rem;
-}
-
-.post-meta ul.tags li a {
-  background: rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.6);
-  border-radius: 3px;
-  padding: 5px 10px;
-}
-
-.post-meta ul.tags li a:hover {
-  background: rgba(0, 0, 0, 0.07);
-  text-decoration: none;
 }
 
 /* POST & PAGE CONTENT */
@@ -466,13 +446,14 @@ a:hover {
   border-left: 4px solid #000;
   border-left-color: var(--main-color);
   padding: 0 20px;
+  margin-top: 1rem;
   font-style: italic;
-  font-size: 120%;
-  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .article-content blockquote a {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .article-content blockquote p {
@@ -480,7 +461,7 @@ a:hover {
 }
 
 .article-content blockquote p:last-child > em {
-  font-size: 80%;
+  font-size: 1.2rem;
 }
 
 .article-content blockquote p:last-child > em::before {
@@ -521,6 +502,7 @@ a:hover {
 }
 
 .article-content figure {
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -532,8 +514,8 @@ a:hover {
 }
 
 .article-content figcaption {
-  font-size: 80%;
-  color: #6c757d;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
   font-style: italic;
 }
 
@@ -546,6 +528,10 @@ a:hover {
 
 .article-content .footnotes p {
   margin-bottom: 0.5rem;
+}
+
+.article-content .footnotes .footnote-backref {
+  box-shadow: none;
 }
 
 /* Make sure medium zoom image is on top of everything else, especially bootstrap navbar */
