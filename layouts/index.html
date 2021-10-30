@@ -19,16 +19,18 @@
 {{ $headerStyle := "" -}}
 {{ if $settingsDesign.Params.image -}}
 {{ $headerStyle = print `background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url(` $settingsDesign.Params.image `);` -}}
+{{ else -}}
+{{ $headerStyle = print `background-color: ` $settingsDesign.Params.color `;` -}}
 {{ end -}}
 <header class="site-header site-header-img"{{ with $headerStyle }} style="{{ . | safeCSS }}"{{ end }}>
 	{{ partial "navigation.html" . }}
 
 	<div class="site-header-img-content container d-flex flex-column justify-content-center">
 		<h1 class="site-title">
-			{{ $settingsGeneral.Title | default "[Titel]" }}
+			{{ $settingsGeneral.Title | default "[Title]" }}
 		</h1>
 		<h2 class="site-description">
-			{{ $settingsGeneral.Description | default "[Untertitel]" }}
+			{{ $settingsGeneral.Description | default "[Subtitle]" }}
 		</h2>
 	</div>
 </header>

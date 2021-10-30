@@ -18,7 +18,7 @@
 					<h1 class="post-title">{{ .Title }}</h1>
 					
 					<div class="post-meta">
-						<img src="{{ $settingsAuthor.Params.image | default `/img/default-author.png` }}" class="rounded-circle" alt="{{ $settingsAuthor.Params.name }}">
+						<img src="{{ $settingsAuthor.Params.image | default `/img/default-author.jpg` }}" class="rounded-circle" alt="{{ $settingsAuthor.Params.name }}">
 						{{ $settingsAuthor.Params.name }} <span class="dot"></span> {{ partial "post_date.html" . }}
 					</div>
 				</div>
