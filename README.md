@@ -1,26 +1,38 @@
 # Lernblog
 
-Einen eigenen Lernblog erstellen per Knopfdruck:
+A blog for your journey of life and learning.
+
+With Lernblog it's very easy to create your own blog. This is what you get:
+
+- A blog that you own. Can be used as portfolio, as a project page or for documenting your learning journey.
+- A simple admin interface to write blog posts.
+- It's free! If you want your own custom domain (for example `yourname.com`) you can register it at any domain provider for a very small fee.
+
+## More Info
+
+For more information head over to [www.lernblog.org](https://www.lernblog.org).
+
+## One-Click Install
+
+Use the following button to install your own Lernblog (for help see instructions on [www.lernblog.org](https://www.lernblog.org)).
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/marcojakob/lernblog&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
-Weitere Informationen zum Lernblog siehe [www.lernblog.org](https://www.lernblog.org).
+## License
 
-## Lizenz
+You are allowed to reuse Lernblog and create your own versions of it. The work is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0).
 
-Der Lernblog darf und soll weiterverwendet und weiterentwickelt werden. Dieses Werk ist - sofern nicht anders angegeben - lizenziert unter [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0).
+### What does the License Mean?
 
-### Was bedeutet die Lizenz konkret?
+This license expresses two aspects that are important to us:
 
-Diese Lizenz drückt zwei Aspekte aus, die uns wichtig sind:
+- **Attribution**: Expressing appreciation and thanks for the people we have received something from.
+- **ShareAlike**: Sharing what we have generously received from others in the same spirit.
 
-- **Attribution**: Wertschätzung und Dank ausdrücken für die Leute, von denen wir etwas empfangen haben.
-- **ShareAlike**: Das, was wir grosszügig von anderen empfangen haben, geben wir im gleichen Sinn wieder weiter.
+So you may use, copy and build on the material. You just have to name the authors who created the documents (attribution). Please include the link to [lernblog.org](https://www.lernblog.org). And if you develop the materials further, you must make them available to others under the same conditions (ShareAlike).
 
-Du darfst die Unterlagen also verwenden, kopieren und weiterentwickeln. Dabei musst du einfach die Autoren nennen, die die Unterlagen erstellt haben (Attribution). Bitte jeweils den Link auf [lernblog.org](https://www.lernblog.org) angeben. Und wenn du die Unterlagen weiterentwickelst, dann musst du diese wieder unter den gleichen Bedingungen anderen zur Verfügung stellen (ShareAlike).
+### Attribution Example
 
-### Quellenangabe
+An attribution should look something like this:
 
-So etwa sollte eine Quellenangabe aussehen:
-
-📌 Vorlage von [lernblog.org](https://www.lernblog.org), Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+📌 Blog template by [lernblog.org](https://www.lernblog.org), License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
