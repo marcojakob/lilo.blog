@@ -1,10 +1,10 @@
 +++
-title = "Einführung"
-date = "2019-05-28"
+title = "Example Post"
+date = "2021-10-30"
 draft = false
 pinned = false
-tags = ["Anleitung", "Learnblog"]
-image = "/img/default-image.png"
+tags = ["Example", "Lernblog"]
+image = "/img/default-image.jpg"
 description = "In diesem Artikel werden Möglichkeiten aufgezeigt für das Verfassen von Blogeinträgen."
 footnotes = "Ganz unten an der Seite können zum Beispiel Bildquellen angegeben werden. Dieser Text ist abgetrennt durch eine Linie und etwas kleiner."
 +++
@@ -39,13 +39,13 @@ Natürlich gibt es auch **fett** und *kursiv*.
 
 ## Links
 
-[So können Links angegeben werden](https://www.learnblog.org). Wenn man in den `Markdown`-Modus wechselt, sieht man auch, welcher Link hinterlegt worden ist.
+[So können Links angegeben werden](https://www.lernblog.org). Wenn man in den `Markdown`-Modus wechselt, sieht man auch, welcher Link hinterlegt worden ist.
 
 ## Zitate
 
 > «Zitate können hervorgehoben werden.»
 >
-> *Autor mit [Link zur Quelle](https://www.learnblog.org)*
+> *Autor mit [Link zur Quelle](https://www.lernblog.org)*
 
 Die Quellenangabe muss *kursiv* geschrieben werden, damit sie als Fusszeile erkannt wird. 
 
@@ -71,7 +71,7 @@ Und so eine nummerierte Liste:
 
 Bilder werden mit dem `+`-Symbol eingefügt.
 
-![Der Alt-Text wird jeweils als Bildunterschrift angezeigt.](/img/default-image.png)
+![Der Alt-Text wird jeweils als Bildunterschrift angezeigt.](/img/default-image.jpg)
 
 **Empfehlung für Bilder**: Meist empfiehlt sich, ein Bild ganz zuoberst im `Inhalt`-Feld einzufügen. Zusätzlich sollte man dieses auch im `Bild`-Feld angeben, damit es in der Blogübersicht erscheint. 
 
@@ -101,7 +101,7 @@ const sun2 = "su" + "n" + "il";
 sun1 === sun2;
 ```
 
-# Code einbetten
+# Videos oder andere Medien einbetten
 
 Es kann auch `HTML-Code` eingefügt werden. Manchmal geht dies etwas einfacher, wenn man dazu in den `Markdown`-Modus wechselt.
 
@@ -109,4 +109,4 @@ Damit können zum Beispiel Filme oder Karten eingebettet werden. Meist sind auf 
 
 # Spass haben
 
-😀 Viel Spass mit deinem Learnblog!
+😀 Viel Spass mit deinem Lernblog!

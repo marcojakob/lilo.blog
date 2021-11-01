@@ -2,8 +2,7 @@
 {{ $settingsDesign := .Site.GetPage "/settings/design" -}}
 {{ $settingsAuthor := .Site.GetPage "/settings/author" -}}
 
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
-  <generator uri="{{ .Site.Params.learnblogUrl }}" version="{{ .Site.Params.learnblogVersion }}">{{ .Site.Params.learnblogName }}</generator>
+  <generator uri="{{ .Site.Params.lernblogUrl }}" version="{{ .Site.Params.lernblogVersion }}">{{ .Site.Params.lernblogName }}</generator>
   <copyright>{{ .Site.Copyright }}</copyright>
   <id>{{ .Permalink }}</id>
   <link href="{{ .Permalink }}" />
