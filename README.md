@@ -1,12 +1,12 @@
 # Lernblog
 
-A blog for your journey of life and learning.
+**A blog for your journey of life and learning.**
 
 With Lernblog it's very easy to create your own blog. This is what you get:
 
 - A blog that you own. Can be used as portfolio, as a project page or for documenting your learning journey.
 - A simple admin interface to write blog posts.
-- It's free! If you want your own custom domain (for example `yourname.com`) you can register it at any domain provider for a very small fee.
+- It's free! If you want your own custom domain (for example `yourname.com`) you can register it at any domain provider. You only pay a small fee for the domain while the blog stays free.
 
 ## More Info
 
