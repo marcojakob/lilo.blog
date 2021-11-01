@@ -22,7 +22,7 @@ Use the following button to install your own Lernblog (for help see instructions
 
 You are allowed to reuse Lernblog and create your own versions of it. The work is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0).
 
-### What does the License Mean?
+### What does the license mean?
 
 This license expresses two aspects that are important to us:
 
