@@ -1,16 +1,16 @@
 languageCode = "de"
 removePathAccents = true
 buildFuture = true
-paginatePath = "seite"
+paginatePath = "page"
 paginate = 12
 disableKinds = ["RSS", "section"]
 pygmentsCodefences = true
-copyright = "2021 by learnblog.org - Creative Commons Attribution-ShareAlike 4.0"
+copyright = "2021 by lernblog.org - Creative Commons Attribution-ShareAlike 4.0"
 
 [params]
-learnblogName = "Learnblog"
-learnblogVersion = "1.4.4"
-learnblogUrl = "https://www.learnblog.org"
+lernblogName = "Lernblog"
+lernblogVersion = "1.5.0"
+lernblogUrl = "https://www.lernblog.org"
 
 [permalinks]
 posts = "/:filename/"
