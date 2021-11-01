@@ -1,6 +1,6 @@
 # Changelog
 
-## Version 1.5.0 (UNRELEASED)
+## Version 1.5.0 (2020-11-01)
 
 - Change from lernblog.ch to lernblog.org.
 - No emojis and other non-Latin characters in slug.
