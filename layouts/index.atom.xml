@@ -2,49 +2,58 @@
 {{ $settingsDesign := .Site.GetPage "/settings/design" -}}
 {{ $settingsAuthor := .Site.GetPage "/settings/author" -}}
 
+{{ $paginator := .Paginate ( where .Site.Pages "Section" "posts" ) -}}
+
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0" xmlns:media="http://search.yahoo.com/mrss/">
   <generator uri="{{ .Site.Params.lernblogUrl }}" version="{{ .Site.Params.lernblogVersion }}">{{ .Site.Params.lernblogName }}</generator>
-  <copyright>{{ .Site.Copyright }}</copyright>
   <id>{{ .Permalink }}</id>
-  <link href="{{ .Permalink }}" />
-  {{- with .OutputFormats.Get "ATOM" }}
-  {{ printf `<link href=%q rel="self" type=%q />` .Permalink .MediaType | safeHTML }}
-  {{ end -}}
-  <title>{{ $settingsGeneral.Title | htmlEscape }}</title>
-  <subtitle>{{ $settingsGeneral.Description | htmlEscape }}</subtitle>
+  <link rel="alternate" href="{{ .Permalink }}?utm_source=atom_feed" type="text/html" />
+  <link rel="self" href="{{ $paginator.URL | absURL }}" type="application/atom+xml" />
+  <link rel="first" href="{{ $paginator.First.URL | absURL }}" type="application/atom+xml" />
+  {{- if $paginator.HasNext }}
+  <link rel="next" href="{{ $paginator.Next.URL | absURL }}" type="application/atom+xml" />
+  {{- end }}
+  {{- if $paginator.HasPrev }}
+  <link rel="prev" href="{{ $paginator.Prev.URL | absURL }}" type="application/atom+xml" />
+  {{- end }}
+  <link rel="last" href="{{ $paginator.Last.URL | absURL }}" type="application/atom+xml" />
+  {{ printf `<title type="html"><![CDATA[%s]]></title>` $settingsGeneral.Title | safeHTML }}
+  {{ printf `<subtitle type="html"><![CDATA[%s]]></subtitle>` $settingsGeneral.Description | safeHTML }}
   <updated>{{ now.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
   <author>
     <name>{{ $settingsAuthor.Params.name | htmlEscape }}</name>
-    {{- with $settingsAuthor.Params.image  }}
-    <uri>{{ . | absURL }}</uri>
+    {{- with $settingsAuthor.Params.email }}
+    <email>{{ . | htmlEscape }}</email>
     {{- end }}
-    <email>{{ $settingsAuthor.Params.email | htmlEscape }}</email>
   </author>
-  {{- with $settingsDesign.Params.icon }}
+  
+  {{- with $settingsAuthor.Params.image }}
   <icon>{{ . | absURL }}</icon>
   {{- end }}
+
   {{- with $settingsDesign.Params.logo }}
   <logo>{{ . | absURL }}</logo>
   {{- end }}
-  {{- with $settingsDesign.Params.image }}
-  <link href="{{ . | absURL }}" rel="enclosure" type="image/*" />
-  {{- end }}
+
   {{- with $settingsDesign.Params.color }}
-  <webfeeds:accentColor>{{ . }}</webfeeds:accentColor>
+  <webfeeds:accentColor>{{ strings.TrimPrefix "#" . }}</webfeeds:accentColor>
   {{- end }}
-  {{- range where .Site.Pages "Section" "posts" }}
+
+  {{- range $paginator.Pages }}
   <entry>
     <id>{{ .Permalink }}</id>
-    <link href="{{ .Permalink }}" />
-    <title>{{ .Title | htmlEscape }}</title>
-    <summary>{{ .Description | default .Summary | htmlEscape }}</summary>
+    <link href="{{ .Permalink }}?utm_source=atom_feed" rel="alternate" type="text/html" />
+    {{ printf `<title type="html"><![CDATA[%s]]></title>` .Title | safeHTML }}
     <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
     <updated>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
-    {{- range .Params.tags }}
+    {{ range .Params.tags }}
     <category term="{{ . | urlize }}" label="{{ . | htmlEscape }}" scheme="{{ partial `tag_url.html` (dict `context` $ `tag` .) | absURL }}" />
-    {{- end }}
-    {{- if .Params.image }}
-    <link href="{{ partial `asset_url.html` (dict `folder` .RelPermalink `asset` .Params.image) | absURL }}" rel="enclosure" type="image/*" />
-    {{- end }}
+    {{ end }}
+    {{ if .Params.image }}
+    <media:content medium="image" url="{{ partial `asset_url.html` (dict `folder` .RelPermalink `asset` .Params.image) | absURL }}" />
+    {{ end }}
+    {{ printf `<summary type="html"><![CDATA[%s]]></summary>` ( .Description | default .Summary ) | safeHTML }}
+    {{ printf `<content type="html"><![CDATA[%s]]></content>` .Content | safeHTML }}
   </entry>
-  {{- end }}
+  {{ end }}
 </feed>
