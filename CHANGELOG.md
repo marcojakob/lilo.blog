@@ -1,5 +1,9 @@
 # Changelog
 
+## UNRELEASED
+
+- Remove `utm_source` in atom feed links again (I don't like it in URLs).  
+
 ## Version 1.5.0 (2020-11-01)
 
 - Change from lernblog.ch to lernblog.org.
