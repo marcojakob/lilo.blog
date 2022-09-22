@@ -1,8 +1,9 @@
 # Changelog
 
-## UNRELEASED
+## Version 1.5.1 (2022-09-22)
 
 - Remove `utm_source` in atom feed links again (I don't like it in URLs).  
+- Fix Netlify CMS cursor jump issue in Chrome/Edge (see https://github.com/netlify/netlify-cms/issues/5092).
 
 ## Version 1.5.0 (2020-11-01)
 

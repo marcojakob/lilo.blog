@@ -7,6 +7,12 @@
     <title>Lernblog Admin</title>
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+      /* Fix Netlify CMS cursor jump issue in Chrome/Edge (see https://github.com/netlify/netlify-cms/issues/5092). */
+      [data-slate-editor] { 
+        -webkit-user-modify: read-write !important; 
+      }
+    </style>
   </head>
   <body>
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>

@@ -8,7 +8,7 @@ copyright = "2021 by lernblog.org - Creative Commons Attribution-ShareAlike 4.0"
 
 [params]
 lernblogName = "Lernblog"
-lernblogVersion = "1.5.0"
+lernblogVersion = "1.5.1"
 lernblogUrl = "https://www.lernblog.org"
 
 [permalinks]
