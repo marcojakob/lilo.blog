@@ -2,7 +2,8 @@
 
 ## UNRELEASED
 
-- Update Hugo to v0.104.3
+- Update Hugo to v0.104.3.
+- Layout: Do not use image zoom of images that are used as links. 
 
 ## Version 1.5.1 (2022-09-22)
 

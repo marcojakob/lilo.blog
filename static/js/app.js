@@ -1,6 +1,6 @@
 $(function() {
   // Init image zoom.
-  mediumZoom(".article-content img, [data-zoomable]");
+  mediumZoom(".article-content *:not(a) > img, [data-zoomable]");
 
   // Hide Header on on scroll down
   var didScroll;
