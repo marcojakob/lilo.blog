@@ -1,5 +1,9 @@
 # Changelog
 
+## UNRELEASED
+
+- Update Hugo to v0.104.3
+
 ## Version 1.5.1 (2022-09-22)
 
 - Remove `utm_source` in atom feed links again (I don't like it in URLs).  
