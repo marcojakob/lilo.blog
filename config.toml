@@ -33,3 +33,6 @@ isPlainText = false
 
 [markup.goldmark.renderer]
 unsafe= true
+
+[frontmatter]
+lastmod = ['lastmod', ':git', ':fileModTime', 'date', 'publishDate']
