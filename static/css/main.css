@@ -15,6 +15,29 @@ a:hover {
   color: var(--main-color);
 }
 
+a.link-gray-no-underline,
+a.link-gray-underline-hover {
+  color: rgba(0, 0, 0, 0.55);
+  text-decoration: none;
+}
+
+a.link-gray-no-underline:hover,
+a.link-gray-underline-hover:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+a.link-main-no-underline,
+a.link-main-underline-hover {
+  color: rgba(0, 0, 0, 0.55);
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a.link-gray-underline-hover:hover,
+a.link-main-underline-hover:hover {
+  text-decoration: underline;
+}
+
 .above-stretched-link {
   position: relative;
   z-index: 2;
@@ -186,16 +209,6 @@ hr {
   margin-bottom: 20px;
 }
 
-.tag-description a {
-  color: rgba(0, 0, 0, 0.55);
-  text-decoration: none;
-}
-
-.tag-description a:hover {
-  color: rgba(0, 0, 0, 0.7);
-  text-decoration: underline;
-}
-
 /* POST CARDS (HOME) */
 .post-card-deck {
   padding-top: 1.5rem;
@@ -235,13 +248,6 @@ hr {
 .post-card .card-tags a {
   padding-top: 10px;
   padding-right: 5px;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.55);
-  color: var(--main-color);
-}
-
-.post-card .card-tags a:hover {
-  text-decoration: underline;
 }
 
 .post-card .card-title,

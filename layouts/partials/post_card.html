@@ -8,7 +8,7 @@
       <ul class="card-tags list-inline">
         {{ range . -}}
         <li class="list-inline-item">
-          <a href="{{ partial `tag_url.html` (dict `context` $ `tag` .) }}" class="above-stretched-link">#{{ . }}</a>
+          <a class="link-main-underline-hover above-stretched-link" href="{{ partial `tag_url.html` (dict `context` $ `tag` .) }}">#{{ . }}</a>
         </li>
         {{ end -}}
       </ul>

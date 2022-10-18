@@ -2,7 +2,7 @@
 {{ $activePageNumber := $pag.PageNumber }}
 {{ if gt $pag.TotalPages 1 }}
 <div class="site-pagination d-flex justify-content-center">
-  <ul class="pagination">
+  <ul class="pagination mb-0">
     {{ if $pag.HasPrev }}
     <li class="page-item">
       <a href="{{ $pag.Prev.URL }}" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>

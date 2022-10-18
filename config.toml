@@ -1,3 +1,4 @@
+languageCode = "de"
 removePathAccents = true
 buildFuture = true
 paginatePath = "page"

@@ -1,0 +1,12 @@
+{{ range ((where .Site.Pages "Section" "posts").GroupByDate "2006") }}
+  <h2>{{ .Key }}</h2>
+  {{ $year := .Key }}
+  {{ range (.Pages.GroupByDate "1") }}
+  <h5 class="mt-0">{{ partial "i18n_month.html" .Key }}</h5>
+  <ul class="list-unstyled">
+    {{ range .Pages }}
+    <li class="mb-0">{{ .Date.Format "02.01.2006" }}: <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+{{ end }}

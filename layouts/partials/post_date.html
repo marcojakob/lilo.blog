@@ -1,4 +1,3 @@
-{{ $monthNames := slice "Januar" "Februar" "März" "April" "Mai" "Juni" "Juli" "August" "September" "Oktober" "November" "Dezember" -}}
 {{ printf `<time class="post-date" datetime="%s">` (.Date.Format "2006-01-02") | safeHTML -}}
-  {{ .Date.Day }}. {{ index $monthNames (sub (int (printf `%d` .Date.Month)) 1) }} {{ .Date.Year -}}
+  {{ .Date.Day }}. {{ partial "i18n_month" .Date }} {{ .Date.Year -}}
 </time>

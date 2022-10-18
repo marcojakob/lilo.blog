@@ -1,0 +1,14 @@
+{{ $monthNames := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
+
+{{ if eq site.LanguageCode "de" }}
+  {{ $monthNames = slice "Januar" "Februar" "März" "April" "Mai" "Juni" "Juli" "August" "September" "Oktober" "November" "Dezember" }}
+{{ end }}
+
+{{ $result := "[no month found]" }}
+{{ if eq (printf "%T" .) "time.Time" }}
+{{ $result = index $monthNames (sub (int (printf `%d` .Month)) 1) }}
+{{ else }}
+{{ $result = index $monthNames (sub (int .) 1) }}
+{{ end }}
+
+{{ return $result }}
