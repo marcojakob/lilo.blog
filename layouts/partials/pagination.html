@@ -1,4 +1,5 @@
 {{ $pag := $.Paginator }}
+{{ $activePageNumber := $pag.PageNumber }}
 {{ if gt $pag.TotalPages 1 }}
 <div class="site-pagination d-flex justify-content-center">
   <ul class="pagination">
@@ -10,9 +11,19 @@
     {{ $ellipsed := false }}
     {{ $shouldEllipse := false }}
     {{ range $pag.Pagers }}
-      {{ $right := sub .TotalPages .PageNumber }}
-      {{ $showNumber := or (le .PageNumber 3) (eq $right 0) }}
-      {{ $showNumber := or $showNumber (and (gt .PageNumber (sub $pag.PageNumber 2)) (lt .PageNumber (add $pag.PageNumber 2)))  }}
+      {{ $showNumber := false }}
+      {{/* Show if it is current number. */}}
+      {{ if eq .PageNumber $activePageNumber }}{{ $showNumber = true }}{{ end }}
+      {{/* Always show first and last number. */}}
+      {{ if or (eq .PageNumber 1) (eq .PageNumber .TotalPages) }}{{ $showNumber = true }}{{ end }}
+      {{/* If first is active, show first three. */}}
+      {{ if and (eq $activePageNumber 1) (le .PageNumber 3) }}{{ $showNumber = true }}{{ end }}
+      {{/* If last is active, show last three. */}}
+      {{ if and (eq $activePageNumber .TotalPages) (gt .PageNumber (sub .TotalPages 3)) }}{{ $showNumber = true }}{{ end }}
+      {{/* Always show one lower than current active. */}}
+      {{ if eq .PageNumber (sub $activePageNumber 1) }}{{ $showNumber = true }}{{ end }}
+      {{/* Always show one higher than current active. */}}
+      {{ if eq .PageNumber (add $activePageNumber 1) }}{{ $showNumber = true }}{{ end }}
       {{ if $showNumber }}
           {{ $ellipsed = false }}
           {{ $shouldEllipse = false }}
@@ -21,9 +32,15 @@
           {{ $ellipsed = true }}
       {{ end }}
       {{ if $showNumber }}
-      <li class="page-item{{ if eq . $pag }} active{{ end }}"><a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a></li>
+        {{ if eq .PageNumber $activePageNumber }}
+        <li class="page-item active"><span class="page-link">{{ .PageNumber }}</span></li>
+        {{ else }}
+        <li class="page-item"><a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a></li>
+        {{ end }}
       {{ else if $shouldEllipse }}
-      <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+      <li class="page-item disabled">
+        <div class="page-ellipse"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></div>
+      </li>
       {{ end }}
     {{ end }}
     {{ if $pag.HasNext }}

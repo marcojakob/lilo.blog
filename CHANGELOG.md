@@ -3,7 +3,11 @@
 ## UNRELEASED
 
 - Update Hugo to v0.104.3.
-- Paginate: Paginate home and tag pages differently (show more entries in tag pages).
+- Paginate improvements and archive:
+  - Paginate home and tag pages differently (show more entries in tag pages).
+  - Fix paginator showing too many page numbers.
+  - Better paginator styling.
+  - Add an archive page.
 - ATOM feed improvements (JSON feed will be deprecated):
   - Create feeds for each tag in addition to the main feed.
   - Paginate feed (same pagination rules as the home and tag pages).
@@ -12,6 +16,7 @@
   - Improve `<updated>` field in entries: Use `:fileModTime` if `:git` info and `lastmod` (in frontmatter) are not available.
 - Layout: Do not use image zoom of images that are used as links.
 - Improve `figcaption` regex to identify images.
+- Upgrade to Bootstrap 5.2. Remove jQuery.
 
 ## Version 1.5.1 (2022-09-22)
 

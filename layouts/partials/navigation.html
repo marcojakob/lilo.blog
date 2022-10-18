@@ -1,18 +1,18 @@
 {{ $settingsGeneral := .Site.GetPage "/settings/general" -}}
 {{ $settingsDesign := .Site.GetPage "/settings/design" -}}
 {{ $settingsNavigation := .Site.GetPage "/settings/navigation" -}}
-<nav class="site-nav navbar navbar-expand-md navbar-light fixed-top">
+<nav class="site-nav navbar navbar-expand-md fixed-top autohide">
   <div class="container">
     <a class="navbar-brand" href="/">
       <img src="{{ $settingsDesign.Params.logo | default "/img/default-logo.png" }}" alt="{{ $settingsGeneral.Title }}">
     </a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="main-navigation">
       <!-- Begin Menu -->
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ms-auto">
         {{ $currentUrl := .RelPermalink }}
         {{ range $settingsNavigation.Params.link }}
         <li class="nav-item">

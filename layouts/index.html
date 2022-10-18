@@ -34,7 +34,7 @@
 
 {{ define "main" }}
 <main class="site-main container">
-	<div class="post-card-deck card-deck">
+	<div class="post-card-deck row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
 		{{ range (.Scratch.Get "paginator").Pages }}
 			{{ partial "post_card.html" . }}
 		{{ end }}

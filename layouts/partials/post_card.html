@@ -1,4 +1,4 @@
-<div class="post-card-outer">
+<div class="col">
   <div class="post-card card">
     {{- if .Params.image }}
     <div class="card-image" style="background-image:url({{ partial `asset_url.html` (dict `folder` .RelPermalink `asset` .Params.image) }});"></div>
@@ -27,7 +27,7 @@
     <div class="card-footer">
       {{ partial "post_date.html" . }}
       {{ if .Params.pinned }}
-        <span class="card-pin float-right main-color" title="Angehefteter Post">
+        <span class="card-pin float-end main-color" title="Pinned Post">
           {{ partial "icon_pin.html" . }}
         </span>
       {{ end }}
