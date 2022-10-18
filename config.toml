@@ -1,15 +1,16 @@
 removePathAccents = true
 buildFuture = true
 paginatePath = "page"
-paginate = 12
 disableKinds = ["RSS", "section"]
 pygmentsCodefences = true
-copyright = "2021 by lernblog.org - Creative Commons Attribution-ShareAlike 4.0"
+copyright = "2022 by lernblog.org - Creative Commons Attribution-ShareAlike 4.0"
 
 [params]
 lernblogName = "Lernblog"
 lernblogVersion = "1.5.1"
 lernblogUrl = "https://www.lernblog.org"
+paginateHome = 12
+paginateTags = 36
 
 [permalinks]
 posts = "/:filename/"
@@ -20,6 +21,7 @@ tag = "tags"
 
 [outputs]
 home = ["HTML", "ATOM", "JSON"]
+term = ["HTML", "ATOM"]
 
 [mediaTypes."application/atom+xml"]
 suffixes = ["xml"]

@@ -1,15 +1,11 @@
 {{ define "head_meta_includes" -}}
 {{ $posts := where (where .Site.Pages "Section" "posts") "Params.pinned" "!=" true -}}
 {{ $posts := $posts | union (where (where .Site.Pages "Section" "posts") "Params.pinned" true) -}}
-{{ $paginator := .Paginate $posts -}}
+{{ $paginator := .Paginate $posts .Site.Params.paginateHome -}}
 {{ .Scratch.Set "paginator" $paginator -}}
 
-{{ if $paginator.HasNext -}}
-	<link rel="next" href="{{ $paginator.Next.URL }}" />
-{{ end -}}
-{{ if $paginator.HasPrev -}}
-	<link rel="prev" href="{{ $paginator.Prev.URL }}" />
-{{ end -}}
+{{ if $paginator.HasNext }}<link rel="next" href="{{ $paginator.Next.URL | absURL }}" />{{ end }}
+{{ if $paginator.HasPrev }}<link rel="prev" href="{{ $paginator.Prev.URL | absURL }}" />{{ end }}
 {{ end }}
 
 {{ define "header" }}

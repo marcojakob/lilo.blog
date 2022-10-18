@@ -3,7 +3,15 @@
 ## UNRELEASED
 
 - Update Hugo to v0.104.3.
-- Layout: Do not use image zoom of images that are used as links. 
+- Paginate: Paginate home and tag pages differently (show more entries in tag pages).
+- ATOM feed improvements (JSON feed will be deprecated):
+  - Create feeds for each tag in addition to the main feed.
+  - Paginate feed (same pagination rules as the home and tag pages).
+  - Use [webfeeds](http://webfeeds.org/rss/1.0) namespace for `icon`, `logo`, `cover`, `accentColor`, and `featuredImage`.
+  - Add featured image to feed content if the feed contains no image.
+  - Improve `<updated>` field in entries: Use `:fileModTime` if `:git` info and `lastmod` (in frontmatter) are not available.
+- Layout: Do not use image zoom of images that are used as links.
+- Improve `figcaption` regex to identify images.
 
 ## Version 1.5.1 (2022-09-22)
 
