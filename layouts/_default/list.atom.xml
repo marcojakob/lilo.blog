@@ -1,0 +1,104 @@
+{{- /* See also: https://validator.w3.org/feed/docs/atom.html */ -}}
+{{- /* See also: http://webfeeds.org/rss/1.0 */ -}}
+
+{{ $settingsGeneral := .Site.GetPage "/settings/general" -}}
+{{ $settingsDesign := .Site.GetPage "/settings/design" -}}
+{{ $settingsAuthor := .Site.GetPage "/settings/author" -}}
+
+{{ $title := $settingsGeneral.Title -}}
+{{ if .Title -}}
+{{ $title = print .Title " | " $settingsGeneral.Title -}}
+{{ end -}}
+
+{{ $paginator := slice -}}
+{{ if .IsHome -}}
+{{ $paginator = .Paginate ( where .Site.Pages "Section" "posts" ) .Site.Params.paginateHome -}}
+{{ else -}}
+{{ $paginator = .Paginate .Pages .Site.Params.paginateTags -}}
+{{ end -}}
+
+{{ printf `<?xml version="1.0" encoding="utf-8"?>` | safeHTML }}
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
+
+  {{- /* Lernblog version. */}}
+  <generator uri="{{ .Site.Params.lernblogUrl }}" version="{{ .Site.Params.lernblogVersion }}">{{ .Site.Params.lernblogName }}</generator>
+
+  {{- /* Feed info. */}}
+  <id>{{ .Permalink }}</id>
+  {{ printf `<title type="html"><![CDATA[%s]]></title>` $title | safeHTML }}
+  {{ printf `<subtitle type="html"><![CDATA[%s]]></subtitle>` $settingsGeneral.Description | safeHTML }}
+  <updated>{{ now.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
+
+  {{- if eq .Data.Singular "tag" }}
+  <category term="{{ .Data.Term | urlize }}" label="{{ .Data.Term | htmlEscape }}" scheme="{{ partial `tag_url.html` (dict `context` $ `tag` .Data.Term) | absURL }}" />
+  {{- end }}
+
+  {{- /* Feed pagination. */}}
+  <link rel="alternate" href="{{ .Permalink }}" type="text/html" />
+  <link rel="self" href="{{ $paginator.URL | absURL }}" type="application/atom+xml" />
+  {{- if $paginator.HasPrev }}
+  <link rel="prev" href="{{ $paginator.Prev.URL | absURL }}" type="application/atom+xml" />
+  {{- end }}
+  {{- if $paginator.HasNext }}
+  <link rel="next" href="{{ $paginator.Next.URL | absURL }}" type="application/atom+xml" />
+  {{- end }}
+
+  {{- /* Author info. */}}
+  <author>
+    <name>{{ $settingsAuthor.Params.name | htmlEscape }}</name>
+    {{- with $settingsAuthor.Params.email }}
+    <email>{{ . | htmlEscape }}</email>
+    {{- end }}
+  </author>
+
+  {{- /* Icon: Use the author image as icon (should be square). */}}
+  {{- with $settingsAuthor.Params.image }}
+  <icon>{{ . | absURL }}</icon>
+  <webfeeds:icon>{{ . | absURL }}</webfeeds:icon>
+  {{- end }}
+
+  {{- /* Logo: An image used as logo. */}}
+  {{- with $settingsDesign.Params.logo }}
+  <logo>{{ . | absURL }}</logo>
+  <webfeeds:logo>{{ . | absURL }}</webfeeds:logo>
+  {{- end }}
+
+  {{- /* Cover: A large image providing visual identification for the feed. */}}
+  {{- with $settingsDesign.Params.logo }}
+  <webfeeds:cover image="{{ . | absURL }}"/>
+  {{- end }}
+
+  {{- /* AccentColor: Should be 6 digit hex number RGB value. It's used for various things in the UI, for example links in articles could appear in this color. */}}
+  {{- with $settingsDesign.Params.color }}
+  <webfeeds:accentColor>{{ strings.TrimPrefix "#" . }}</webfeeds:accentColor>
+  {{- end }}
+
+  {{- /* Entries. */}}
+  {{- range $paginator.Pages }}
+  <entry>
+    <id>{{ .Permalink }}</id>
+    <link href="{{ .Permalink }}" rel="alternate" type="text/html" />
+    {{ printf `<title type="html"><![CDATA[%s]]></title>` .Title | safeHTML }}
+    <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
+    <updated>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
+    {{- range .Params.tags }}
+    <category term="{{ . | urlize }}" label="{{ . | htmlEscape }}" scheme="{{ partial `tag_url.html` (dict `context` $ `tag` .) | absURL }}" />
+    {{- end }}
+    {{- if .Params.image }}
+    <webfeeds:featuredImage url="{{ partial `asset_url.html` (dict `folder` .RelPermalink `asset` .Params.image) | absURL }}" />
+    {{- end }}
+    {{ printf `<summary type="html"><![CDATA[%s]]></summary>` ( .Description | default .Summary ) | safeHTML }}
+
+    {{- $content := .Content }}
+
+    {{- /* Add featured image to content if not already present. */}}
+    {{- if .Params.image }}
+      {{- $matches := findRE (print "<img[^>]+src=\"" .Params.image "\"[^>]*>") $content }}
+      {{- if not $matches }}
+      {{- $content = print "<p><img class=\"webfeedsFeaturedVisual\" src=\"" .Params.image "\"></p>" $content }}
+      {{- end }}
+    {{- end }}
+    {{ printf `<content type="html"><![CDATA[%s]]></content>` $content | safeHTML }}
+  </entry>
+  {{- end }}
+</feed>
