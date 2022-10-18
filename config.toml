@@ -8,7 +8,7 @@ copyright = "2022 by lernblog.org - Creative Commons Attribution-ShareAlike 4.0"
 
 [params]
 lernblogName = "Lernblog"
-lernblogVersion = "1.5.1"
+lernblogVersion = "2.0.0-beta"
 lernblogUrl = "https://www.lernblog.org"
 paginateHome = 12
 paginateTags = 36

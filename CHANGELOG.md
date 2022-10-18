@@ -1,6 +1,6 @@
 # Changelog
 
-## UNRELEASED
+## Version 2.0.0-beta
 
 - Update Hugo to v0.104.3.
 - Paginate improvements and archive:
