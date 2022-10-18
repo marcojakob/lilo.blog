@@ -1,2 +1,2 @@
 {{/* Add alt text as caption text to images. */}}
-{{ . | replaceRE `<p>(<img.+\salt=\"([^\"]+)\"[^>]*>)<\/p>` `<figure>$1<figcaption>$2</figcaption></figure>` | safeHTML }}
+{{ return ( . | replaceRE `<p>(<img[^>]+alt=\"([^\"]+)\"[^>]*>)<\/p>` `<figure>$1<figcaption>$2</figcaption></figure>` | safeHTML ) }}
