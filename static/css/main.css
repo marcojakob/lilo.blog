@@ -338,6 +338,10 @@ hr {
   .article-content {
     font-size: 1.2rem;
   }
+
+  .article-content .lead {
+    font-size: 1.5rem;
+  }
 }
 
 .article-content > h1,
@@ -463,6 +467,10 @@ hr {
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.7);
   font-style: italic;
+}
+
+.article-content .alert *:last-child {
+  margin-bottom: 0;
 }
 
 /* POST & PAGE FOOTNOTES */

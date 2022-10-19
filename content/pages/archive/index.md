@@ -5,4 +5,4 @@ description = ""
 image = ""
 +++
 
-{{< archive >}}
+{{<archive>}}

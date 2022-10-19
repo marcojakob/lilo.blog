@@ -37,3 +37,9 @@ unsafe= true
 
 [frontmatter]
 lastmod = ['lastmod', ':git', ':fileModTime', 'date', 'publishDate']
+
+[privacy]
+  [privacy.vimeo]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true

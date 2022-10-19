@@ -3,6 +3,7 @@
 ## Version 2.0.0-beta
 
 - Update Hugo to v0.104.3.
+- Upgrade to Bootstrap 5.2. Remove jQuery.
 - Paginate improvements and archive:
   - Paginate home and tag pages differently (show more entries in tag pages).
   - Fix paginator showing too many page numbers.
@@ -16,7 +17,8 @@
   - Improve `<updated>` field in entries: Use `:fileModTime` if `:git` info and `lastmod` (in frontmatter) are not available.
 - Layout: Do not use image zoom of images that are used as links.
 - Improve `figcaption` regex to identify images.
-- Upgrade to Bootstrap 5.2. Remove jQuery.
+- Add shortcodes for `{{<archive>}}`, `{{<box>}}{{</box>}}`, `{{<lead>}}{{</lead>}}`.
+  Also `{{<youtube video_id>}}` and `{{<vimeo video_id>}}` in non-tracking mode can be used.
 
 ## Version 1.5.1 (2022-09-22)
 
