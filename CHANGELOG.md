@@ -17,9 +17,10 @@
   - Improve `<updated>` field in entries: Use `:fileModTime` if `:git` info and `lastmod` (in frontmatter) are not available.
 - Layout: Do not use image zoom of images that are used as links.
 - Improve `figcaption` regex to identify images.
+- Improve print layout.
 - Add shortcodes for `{{<archive>}}`, `{{<box>}}{{</box>}}`, `{{<lead>}}{{</lead>}}`.
   Also `{{<youtube video_id>}}` and `{{<vimeo video_id>}}` in non-tracking mode can be used.
-- Improve print layout.
+- Add examples for box, lead, youtube, and vimeo.
 
 ## Version 1.5.1 (2022-09-22)
 
