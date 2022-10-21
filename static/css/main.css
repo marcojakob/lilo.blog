@@ -495,3 +495,56 @@ hr {
 .medium-zoom-image {
   z-index: 9001;
 }
+
+/* PRINT STYLES */
+@media print {
+  @page {
+    margin: 60pt 60pt 60pt 60pt;
+  }
+
+  .article-content > *:last-child {
+    margin-bottom: 0; /* Avoid empty last page. */
+  }
+
+  .site-header,
+  .site-footer {
+    display: none;
+  }
+
+  .post-header,
+  .page-header {
+    padding-top: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote {
+    break-inside: avoid;
+  }
+
+  /* Hack to avoid page break after headings. */
+  h1::after,
+  h2::after,
+  h3::after,
+  h4::after,
+  h5::after,
+  h6::after {
+    display: block;
+    height: 7rem;
+    margin-bottom: -7rem;
+    content: "";
+  }
+
+  h1::before,
+  h2::before,
+  h3::before,
+  h4::before,
+  h5::before,
+  h6::before {
+    display: none !important;
+  }
+}

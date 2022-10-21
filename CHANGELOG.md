@@ -19,6 +19,7 @@
 - Improve `figcaption` regex to identify images.
 - Add shortcodes for `{{<archive>}}`, `{{<box>}}{{</box>}}`, `{{<lead>}}{{</lead>}}`.
   Also `{{<youtube video_id>}}` and `{{<vimeo video_id>}}` in non-tracking mode can be used.
+- Improve print layout.
 
 ## Version 1.5.1 (2022-09-22)
 
