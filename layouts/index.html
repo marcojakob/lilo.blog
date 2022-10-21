@@ -21,7 +21,7 @@
 <header class="site-header site-header-img"{{ with $headerStyle }} style="{{ . | safeCSS }}"{{ end }}>
 	{{ partial "navigation.html" . }}
 
-	<div class="site-header-img-content container d-flex flex-column justify-content-center">
+	<div class="site-header-img-content container">
 		<h1 class="site-title">
 			{{ $settingsGeneral.Title | default "[Title]" }}
 		</h1>
@@ -36,12 +36,14 @@
 <main class="site-main container">
 	<div class="post-card-deck row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
 		{{ range (.Scratch.Get "paginator").Pages }}
+		<div class="col">
 			{{ partial "post_card.html" . }}
+		</div>
 		{{ end }}
 	</div>
 	{{ partial "pagination.html" . }}
-	<div class="d-flex justify-content-center mt-3">
-		<a class="link-gray-no-underline" href="/archive/">— Archive —</a>
+	<div class="d-flex justify-content-center mt-3 mb-5">
+		<a class="link-gray-no-underline" href="/archive/">— Archiv —</a>
 	</div>
 </main>
 {{ end }}

@@ -15,7 +15,7 @@
 
 {{ define "main" }}
 <main class="site-main container">
-  <div class="article-content mt-5">
+  <div class="article-content mt-4">
     <ul class="list-unstyled">
       {{ range sort .Pages "Title" }}
         <li><a href="{{ .RelPermalink }}">#{{ .Title }}</a> ({{ len .Pages }})</li>

@@ -24,9 +24,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div class="container">
+
 		<div class="row">
 			<div class="col-md-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8">
 				<div class="article-content">
@@ -43,4 +41,37 @@
 		</div>
 	</div>
 </main>
+
+<!-- Related Content -->
+{{- $posts := where .Site.Pages "Section" "posts" }}
+{{- $related := $posts.Related . | first 3 }}
+{{- with .Next }}
+	{{ $related = (slice .) | union $related }}
+{{- end }}
+{{- with .Prev }}
+	{{ $related = (slice .) | union $related }}
+{{- end }}
+
+{{- if $related }}
+<aside class="site-related">
+	<div class="site-related-inner">
+		<div class="container">
+			<h2>Verwandte Artikel</h2>
+			<a class="link-gray-underline-hover" href="/">&larr; Alle Blogartikel</a>
+			<div class="site-related-row row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+				{{ range $index, $post := $related | first 3 }}
+				{{ if le $index 1 }}
+					<div class="col">
+				{{ else }}
+					<div class="col d-none d-md-block">
+				{{ end }}
+					{{ partial "post_card.html" (dict "post" $post "small" true) }}
+				</div>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</aside>
+{{- end }}
+
 {{ end }}

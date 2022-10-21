@@ -1,36 +1,44 @@
-<div class="col">
-  <div class="post-card card">
-    {{- if .Params.image }}
-    <div class="card-image" style="background-image:url({{ partial `asset_url.html` (dict `folder` .RelPermalink `asset` .Params.image) }});"></div>
-    {{- end }}
-    <div class="card-body">
-      {{ with .Params.tags -}}
-      <ul class="card-tags list-inline">
-        {{ range . -}}
-        <li class="list-inline-item">
-          <a class="link-main-underline-hover above-stretched-link" href="{{ partial `tag_url.html` (dict `context` $ `tag` .) }}">#{{ . }}</a>
-        </li>
-        {{ end -}}
-      </ul>
+{{/* Setup for either one parameter or two parameters inside a 'dict'. */}}
+{{- $post := . }}
+{{- $small := false }}
+{{- if not .IsPage }}
+  {{- $post = .post }}
+  {{- $small = .small }}
+{{- end }}
+
+<div class="post-card card">
+  {{- if $post.Params.image }}
+  <div class="card-image" style="background-image:url({{ partial `asset_url.html` (dict `folder` $post.RelPermalink `asset` $post.Params.image) }});"></div>
+  {{- end }}
+  <div class="card-body">
+    {{ with $post.Params.tags -}}
+    <ul class="card-tags list-inline">
+      {{ range . -}}
+      <li class="list-inline-item">
+        <a class="link-main-underline-hover above-stretched-link" href="{{ partial `tag_url.html` (dict `context` $ `tag` .) }}">#{{ . }}</a>
+      </li>
       {{ end -}}
-      <h2 class="card-title">
-        <a href="{{ .RelPermalink }}" class="stretched-link">{{ .Title | truncate 60 }}</a>
-      </h2>
-      <div class="card-text">
-        {{ if .Params.image }}
-          {{ .Description | default .Summary | truncate 160 }}
-        {{ else }}
-          {{ .Description | default .Summary | truncate 320 }}
-        {{ end }}
-      </div>
-    </div>
-    <div class="card-footer">
-      {{ partial "post_date.html" . }}
-      {{ if .Params.pinned }}
-        <span class="card-pin float-end main-color" title="Pinned Post">
-          {{ partial "icon_pin.html" . }}
-        </span>
+    </ul>
+    {{ end -}}
+    <h2 class="card-title">
+      <a href="{{ $post.RelPermalink }}" class="stretched-link">{{ $post.Title | truncate 60 }}</a>
+    </h2>
+    {{ if not $small -}}
+    <div class="card-text">
+      {{ if $post.Params.image }}
+        {{ $post.Description | default $post.Summary | truncate 160 }}
+      {{ else }}
+        {{ $post.Description | default $post.Summary | truncate 320 }}
       {{ end }}
     </div>
+    {{ end -}}
+  </div>
+  <div class="card-footer">
+    {{ partial "post_date.html" $post }}
+    {{ if $post.Params.pinned }}
+      <span class="card-pin float-end main-color" title="Pinned Post">
+        {{ partial "icon_pin.html" }}
+      </span>
+    {{ end }}
   </div>
 </div>

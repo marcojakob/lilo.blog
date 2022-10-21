@@ -21,6 +21,7 @@
 - Add shortcodes for `{{<archive>}}`, `{{<box>}}{{</box>}}`, `{{<lead>}}{{</lead>}}`.
   Also `{{<youtube video_id>}}` and `{{<vimeo video_id>}}` in non-tracking mode can be used.
 - Add examples for box, lead, youtube, and vimeo.
+- Show related blog posts at the bottom of each post.
 
 ## Version 1.5.1 (2022-09-22)
 
