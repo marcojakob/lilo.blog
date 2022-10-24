@@ -42,14 +42,30 @@
 	</div>
 </main>
 
-<!-- Related Content -->
-{{- $posts := where .Site.Pages "Section" "posts" }}
+{{- /* Related Content */}}
+{{- $posts := where .Site.RegularPages "Section" "posts" }}
 {{- $related := $posts.Related . | first 3 }}
-{{- with .Next }}
-	{{ $related = (slice .) | union $related }}
-{{- end }}
-{{- with .Prev }}
-	{{ $related = (slice .) | union $related }}
+
+{{- /* Add previous and next if no related has been found. Need to do this manually because 
+	 	   .PrevInSection / .NextInSection does not work with disabled sections in config.toml. */}}
+{{- if lt (len $related) 3 }}
+	{{- $current := .}}
+	{{- range $i, $p := $posts }}
+		{{- if eq $current $p }}
+			{{- if gt $i 0 }}
+				{{- $next := index $posts (sub $i 1) }}
+				{{- if not (in $related $next) }}
+					{{- $related = $related | append $next }}
+				{{- end}}
+			{{- end }}
+			{{- if lt $i (sub (len $posts) 1) }}
+				{{- $prev := index $posts (add $i 1) }}
+				{{- if not (in $related $prev) }}
+					{{- $related = $related | append $prev }}
+				{{- end}}
+			{{- end }}
+		{{- end }}
+	{{- end }}
 {{- end }}
 
 {{- if $related }}

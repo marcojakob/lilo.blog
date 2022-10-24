@@ -47,7 +47,7 @@ lastmod = ['lastmod', ':git', ':fileModTime', 'date', 'publishDate']
   weight = 80
 [[related.indices]]
   name = "date"
-  weight = 70
+  weight = 60
 
 [privacy]
   [privacy.vimeo]
