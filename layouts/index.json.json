@@ -36,7 +36,7 @@
   },
   "_lernblog_date_build": "{{ now.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
   "items": [
-    {{- range $i, $e := where .Site.Pages "Section" "posts" }}
+    {{- range $i, $e := where .Site.RegularPages "Section" "posts" }}
     {{- if $i }},{{ end }}
     {
       "id": "{{ $e.Permalink }}",

@@ -1,4 +1,4 @@
-{{ range ((where .Site.Pages "Section" "posts").GroupByDate "2006") }}
+{{ range ((where .Site.RegularPages "Section" "posts").GroupByDate "2006") }}
   <h2>{{ .Key }}</h2>
   {{ $year := .Key }}
   {{ range (.Pages.GroupByDate "1") }}

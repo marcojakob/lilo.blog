@@ -12,7 +12,7 @@
 
 {{ $paginator := slice -}}
 {{ if .IsHome -}}
-{{ $paginator = .Paginate ( where .Site.Pages "Section" "posts" ) .Site.Params.paginateHome -}}
+{{ $paginator = .Paginate ( where .Site.RegularPages "Section" "posts" ) .Site.Params.paginateHome -}}
 {{ else -}}
 {{ $paginator = .Paginate .Pages .Site.Params.paginateTags -}}
 {{ end -}}
