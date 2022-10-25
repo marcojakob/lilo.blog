@@ -1,0 +1,61 @@
+{{ define "header" }}
+<header class="site-header">
+	{{ partial "navigation.html" . }}
+
+	<div class="archive-header container">
+    <h5 class="archive-description">
+      <a class="link-gray-underline-hover" href="/">&larr; Home</a> 
+    </h5>
+		<h1 class="archive-title">
+      <span>Blog Archive</span>
+		</h1>
+	</div>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<main class="site-main container">
+  <div class="article-content my-4">
+    <div class="row">
+      <div class="col-lg-9">
+        <table class="archive-table table table-sm mb-5">
+          <tbody>
+            {{ range ((where .Site.RegularPages "Section" "posts").GroupByDate "2006") }}
+            <tr>
+              <th scope="row" colspan="3"><h2>{{ .Key }}</h2></th>
+            </tr>
+            {{ range .Pages }}
+            <tr>
+              <td class="py-2">
+                <h5><a href={{ .RelPermalink }}>{{ .Title }}</a></h5>
+                <div class="small">{{ .Description | default .Summary | truncate 120 }}</div>
+              </td>
+              <td class="py-2 d-none d-sm-table-cell">
+                <ul class="list-unstyled my-0 small">
+                  {{- range .Params.tags }}  
+                  <li class="mb-0">
+                    <a class="link-main-no-underline" href="{{ partial `tag_url.html` . }}">#{{ . }}</a>
+                  </li>
+                  {{- end -}}
+                </ul>
+              </td>
+              <td class="small py-2 text-nowrap">{{ .Date | time.Format ":date_medium" }}</td>
+            </tr>
+            {{ end }}
+            {{ end }}
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-3">
+        <h2>Tags 🏷️</h2>
+
+        <ul class="list-unstyled">
+          {{ range .Site.Taxonomies.tags }}
+          <li class="mb-1"><a href="{{ .Page.RelPermalink }}">#{{ .Page.Title }}</a>&nbsp;({{ len .Pages }})</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+{{ end }}

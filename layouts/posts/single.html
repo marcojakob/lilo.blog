@@ -9,7 +9,7 @@
 					<ul class="post-tags list-inline">
 						{{ range . }}
 						<li class="list-inline-item">
-							<a class="link-main-no-underline" href="{{ partial `tag_url.html` (dict `context` $ `tag` .) }}">#{{ . }}</a>
+							<a class="link-main-no-underline" href="{{ partial `tag_url.html` . }}">#{{ . }}</a>
 						</li>
 						{{ end }}
 					</ul>
@@ -46,34 +46,18 @@
 {{- $posts := where .Site.RegularPages "Section" "posts" }}
 {{- $related := $posts.Related . | first 3 }}
 
-{{- /* Add previous and next if no related has been found. Need to do this manually because 
-	 	   .PrevInSection / .NextInSection does not work with disabled sections in config.toml. */}}
-{{- if lt (len $related) 3 }}
-	{{- $current := .}}
-	{{- range $i, $p := $posts }}
-		{{- if eq $current $p }}
-			{{- if gt $i 0 }}
-				{{- $next := index $posts (sub $i 1) }}
-				{{- if not (in $related $next) }}
-					{{- $related = $related | append $next }}
-				{{- end}}
-			{{- end }}
-			{{- if lt $i (sub (len $posts) 1) }}
-				{{- $prev := index $posts (add $i 1) }}
-				{{- if not (in $related $prev) }}
-					{{- $related = $related | append $prev }}
-				{{- end}}
-			{{- end }}
-		{{- end }}
-	{{- end }}
-{{- end }}
+{{- /* Add previous and next. Will show if not already enough related are there. */}}
+{{- if and (.NextInSection) (not (in $related .NextInSection)) }}
+	{{- $related = $related | append .NextInSection }}
+{{- end}}
+{{- if and (.PrevInSection) (not (in $related .PrevInSection)) }}
+	{{- $related = $related | append .PrevInSection }}
+{{- end}}
 
 {{- if $related }}
 <aside class="site-related">
 	<div class="site-related-inner">
 		<div class="container">
-			<h2>Verwandte Artikel</h2>
-			<a class="link-gray-underline-hover" href="/">&larr; Alle Blogartikel</a>
 			<div class="site-related-row row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 				{{ range $index, $post := $related | first 3 }}
 				{{ if le $index 1 }}

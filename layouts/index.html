@@ -35,16 +35,20 @@
 {{ define "main" }}
 <main class="site-main container">
 	<div class="post-card-deck row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-		{{ range (.Scratch.Get "paginator").Pages }}
+		{{ $paginator := .Scratch.Get "paginator"}}
+		{{ range $paginator.Pages }}
 		<div class="col">
 			{{ partial "post_card.html" . }}
 		</div>
 		{{ end }}
 	</div>
 	{{ partial "pagination.html" . }}
+
+	{{- if gt (len $paginator.Pages) 2 }}
 	<div class="d-flex justify-content-center mt-3 mb-5">
-		<a class="link-gray-no-underline" href="/archive/">— Archiv —</a>
+		<a class="link-gray-no-underline" href="/posts/">— Archive —</a>
 	</div>
+	{{- end }}
 </main>
 {{ end }}
 

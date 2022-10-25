@@ -8,7 +8,7 @@
   - Paginate home and tag pages differently (show more entries in tag pages).
   - Fix paginator showing too many page numbers.
   - Better paginator styling.
-  - Add an archive page.
+  - Add an archive page under `/posts/`.
 - ATOM feed improvements (JSON feed will be deprecated):
   - Create feeds for each tag in addition to the main feed.
   - Paginate feed (same pagination rules as the home and tag pages).
@@ -18,7 +18,7 @@
 - Layout: Do not use image zoom of images that are used as links.
 - Improve `figcaption` regex to identify images.
 - Improve print layout.
-- Add shortcodes for `{{<archive>}}`, `{{<box>}}{{</box>}}`, `{{<lead>}}{{</lead>}}`.
+- Add shortcodes for `{{<box>}}{{</box>}}`, `{{<lead>}}{{</lead>}}`.
   Also `{{<youtube video_id>}}` and `{{<vimeo video_id>}}` in non-tracking mode can be used.
 - Add examples for box, lead, youtube, and vimeo.
 - Show related blog posts at the bottom of each post.
