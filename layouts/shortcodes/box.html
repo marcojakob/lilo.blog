@@ -1,3 +1,22 @@
-<div class="alert alert-secondary">
-  {{ .Inner | markdownify }}
-</div>
+{{ if .Get "title" }}
+  {{ $titleId := anchorize (.Get "title") }}
+  {{ $contentId := print $titleId "-content" }}
+  <div class="accordion">
+    <div class="accordion-item">
+      <h5 class="accordion-header" id="{{ $titleId }}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ $contentId }}" aria-expanded="false" aria-controls="{{ $contentId }}">
+          {{ .Get "title" }}
+        </button>
+      </h5>
+      <div id="{{ $contentId }}" class="accordion-collapse collapse" aria-labelledby="{{ $titleId }}">
+        <div class="accordion-body">
+          {{ .Inner | markdownify }}
+        </div>
+      </div>
+    </div>
+  </div>
+{{ else }}
+  <div class="alert">
+    {{ .Inner | markdownify }}
+  </div>
+{{ end }}

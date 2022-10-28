@@ -111,6 +111,21 @@ In dieser Box können Texte, Bilder, Videos oder andere Inhalte dargestellt werd
 Der Inhalt einer Box muss wie hier von zwei Blöcken umgeben werden.   
 `{{</*/box*/>}}`
 
+{{<box title="Ausklappbare Box">}}
+Wird ein Titel angegeben, so kann die Box ausgeklappt werden.
+
+
+Dies eignet sich auch für längere Inhalte.
+
+![](/img/default-image.jpg)
+
+Auch Bilder können in eine Box gepackt werden.
+{{</box>}}
+
+`{{</*box title="Ausklappbare Box"*/>}}`   
+Wird ein Titel angegeben, so kann die Box ausgeklappt werden.   
+`{{</*/box*/>}}`
+
 ## Video, Audio und andere Medien einbetten
 
 Es kann auch `HTML-Code` eingefügt werden. Manchmal geht dies etwas einfacher, wenn man dazu in den `Markdown`-Modus wechselt.

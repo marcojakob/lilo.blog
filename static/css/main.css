@@ -255,14 +255,13 @@ hr {
   }
 }
 
-.post-card .card-image {
-  border-radius: var(--bs-card-inner-border-radius)
-    var(--bs-card-inner-border-radius) 0 0;
+.post-card .card-header {
   background-position: 50% 50%;
   background-size: cover;
   overflow: hidden;
   height: 0;
   padding-top: 56.25%; /* 16:9 ratio */
+  border-bottom: none;
 }
 
 .post-card .card-tags {
@@ -295,7 +294,7 @@ hr {
 
 .post-card .card-footer {
   padding-top: 0;
-  padding-bottom: var(--bs-card-spacer-y);
+  padding-bottom: 1rem;
   border-top: none;
   background-color: transparent;
   font-size: 0.95rem;
@@ -373,37 +372,37 @@ hr {
   }
 }
 
-.article-content > h1,
-.article-content > h2,
-.article-content > h3,
-.article-content > h4,
-.article-content > h5,
-.article-content > h6 {
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
   margin-top: 3rem;
 }
 
 @media (max-width: 767px) {
-  .article-content > h1 {
+  .article-content h1 {
     font-size: 2rem;
     margin-top: 2rem;
   }
-  .article-content > h2 {
+  .article-content h2 {
     font-size: 1.75rem;
     margin-top: 2rem;
   }
-  .article-content > h3 {
+  .article-content h3 {
     font-size: 1.5rem;
     margin-top: 2rem;
   }
-  .article-content > h4 {
+  .article-content h4 {
     font-size: 1.3rem;
     margin-top: 2rem;
   }
-  .article-content > h5 {
+  .article-content h5 {
     font-size: 1.15rem;
     margin-top: 2rem;
   }
-  .article-content > h6 {
+  .article-content h6 {
     font-size: 1rem;
     margin-top: 2rem;
   }
@@ -413,15 +412,15 @@ hr {
   margin-top: 0;
 }
 
-.article-content > h1[id]::before,
-.article-content > h2[id]::before,
-.article-content > h3[id]::before,
-.article-content > h4[id]::before,
-.article-content > h5[id]::before,
-.article-content > h6[id]::before {
+.article-content h1[id]::before,
+.article-content h2[id]::before,
+.article-content h3[id]::before,
+.article-content h4[id]::before,
+.article-content h5[id]::before,
+.article-content h6[id]::before {
   display: block;
-  height: 5.5rem;
-  margin-top: -5.5rem;
+  height: 5rem;
+  margin-top: -5rem;
   content: "";
 }
 
@@ -480,7 +479,7 @@ hr {
   margin-bottom: 0;
 }
 
-.article-content li {
+.article-content li p {
   margin-bottom: 0.75rem;
 }
 
@@ -502,11 +501,7 @@ hr {
   font-style: italic;
 }
 
-.article-content .alert *:last-child {
-  margin-bottom: 0;
-}
-
-/* POST & PAGE FOOTNOTES */
+/* FOOTNOTES */
 /* Note: .footnotes is also the class that blackfriday markdown parser creates for footnotes. */
 .article-content .footnotes {
   font-size: 80%;
@@ -519,6 +514,59 @@ hr {
 
 .article-content .footnotes .footnote-backref {
   box-shadow: none;
+}
+
+/* BOX */
+.article-content .alert {
+  color: rgba(0, 0, 0, 0.8);
+  background-color: var(--bs-gray-300);
+  border-color: var(--bs-gray-400);
+}
+
+.article-content .alert,
+.article-content .accordion {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.article-content .alert > *:last-child,
+.article-content .accordion-body > *:last-child {
+  margin-bottom: 0;
+}
+
+.article-content .accordion-item {
+  color: rgba(0, 0, 0, 0.8);
+  background-color: var(--bs-gray-300);
+  border-color: var(--bs-gray-400);
+}
+
+.article-content .accordion-header {
+  margin-top: 0;
+}
+
+.article-content .accordion-button {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: inherit;
+  font-weight: inherit;
+  background-color: var(--bs-gray-300);
+  border: none;
+  box-shadow: none;
+}
+
+.article-content .accordion-button:not(.collapsed) {
+  box-shadow: inset 0 -1px 0 var(--bs-gray-500);
+}
+
+.article-content .accordion-button:hover {
+  background-color: var(--bs-gray-400);
+}
+
+.article-content .accordion-button:focus {
+  box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+}
+
+.article-content .accordion-button::after {
+  background-image: var(--bs-accordion-btn-icon);
 }
 
 /* Make sure medium zoom image is on top of everything else, especially bootstrap navbar */
