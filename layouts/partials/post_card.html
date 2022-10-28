@@ -8,7 +8,7 @@
 
 <div class="post-card card">
   {{- if $post.Params.image }}
-  <div class="card-image" style="background-image:url({{ partial `asset_url.html` (dict `folder` $post.RelPermalink `asset` $post.Params.image) }});"></div>
+  <div class="card-header" style="background-image:url({{ partial `asset_url.html` (dict `folder` $post.RelPermalink `asset` $post.Params.image) }});"></div>
   {{- end }}
   <div class="card-body">
     {{ with $post.Params.tags -}}
