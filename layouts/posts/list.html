@@ -15,7 +15,7 @@
 
 {{ define "main" }}
 <main class="site-main container">
-  <div class="article-content my-4">
+  <div class="my-4">
     <div class="row">
       <div class="col-lg-9">
         <table class="archive-table table table-sm mb-5">
@@ -28,10 +28,10 @@
             <tr>
               <td class="py-2">
                 <h5><a href={{ .RelPermalink }}>{{ .Title }}</a></h5>
-                <div class="small">{{ .Description | default .Summary | truncate 120 }}</div>
+                <div class="">{{ .Description | default .Summary | truncate 120 }}</div>
               </td>
               <td class="py-2 d-none d-sm-table-cell">
-                <ul class="list-unstyled my-0 small">
+                <ul class="list-unstyled my-0">
                   {{- range .Params.tags }}  
                   <li class="mb-0">
                     <a class="link-main-no-underline" href="{{ partial `tag_url.html` . }}">#{{ . }}</a>
@@ -39,7 +39,7 @@
                   {{- end -}}
                 </ul>
               </td>
-              <td class="small py-2 text-nowrap">{{ .Date | time.Format ":date_medium" }}</td>
+              <td class="py-2 text-nowrap">{{ .Date | time.Format ":date_medium" }}</td>
             </tr>
             {{ end }}
             {{ end }}
