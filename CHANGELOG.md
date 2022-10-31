@@ -1,8 +1,8 @@
 # Changelog
 
-## Version 2.0.0-beta
+## Version 2.0.0
 
-- Update Hugo to v0.104.3.
+- Update Hugo to v0.105.0.
 - Upgrade to Bootstrap 5.2. Remove jQuery.
 - Paginate improvements and archive:
   - Paginate home and tag pages differently (show more entries in tag pages).
