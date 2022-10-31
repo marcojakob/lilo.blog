@@ -9,12 +9,13 @@
   - Fix paginator showing too many page numbers.
   - Better paginator styling.
   - Add an archive page under `/posts/`.
-- ATOM feed improvements (JSON feed will be deprecated):
+- ATOM feed improvements (JSON feed will be removed):
   - Create feeds for each tag in addition to the main feed.
   - Paginate feed (same pagination rules as the home and tag pages).
   - Use [webfeeds](http://webfeeds.org/rss/1.0) namespace for `icon`, `logo`, `cover`, `accentColor`, and `featuredImage`.
   - Add featured image to feed content if the feed contains no image.
   - Improve `<updated>` field in entries: Use `:fileModTime` if `:git` info and `lastmod` (in frontmatter) are not available.
+- BREAKING: Remove JSON feed (did not increase in popularity in recent years and is a hassle to keep synced with ATOM feed).
 - Layout: Do not use image zoom of images that are used as links.
 - Improve `figcaption` regex to identify images.
 - Improve print layout.

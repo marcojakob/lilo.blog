@@ -10,7 +10,7 @@ copyright = "2022 by lernblog.org - Creative Commons Attribution-ShareAlike 4.0"
 
 [params]
 lernblogName = "Lernblog"
-lernblogVersion = "2.0.0-beta"
+lernblogVersion = "2.0.0"
 lernblogUrl = "https://www.lernblog.org"
 paginateHome = 12
 paginateTags = 36
@@ -23,7 +23,7 @@ pages = "/:filename/"
 tag = "tags"
 
 [outputs]
-home = ["HTML", "ATOM", "JSON"]
+home = ["HTML", "ATOM"]
 term = ["HTML", "ATOM"]
 
 [mediaTypes."application/atom+xml"]
