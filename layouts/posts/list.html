@@ -8,6 +8,7 @@
     </h5>
 		<h1 class="archive-title">
       <span>Blog Archive</span>
+      <small class="counter">({{ len (where .Site.RegularPages "Section" "posts") }} Posts)</small>
 		</h1>
 	</div>
 </header>
@@ -22,7 +23,10 @@
           <tbody>
             {{ range ((where .Site.RegularPages "Section" "posts").GroupByDate "2006") }}
             <tr>
-              <th scope="row" colspan="3"><h2>{{ .Key }}</h2></th>
+              <th scope="row" colspan="3">
+                <h2>{{ .Key }} <small class="counter">({{ len .Pages }} Posts)</small></h2>
+                
+              </th>
             </tr>
             {{ range .Pages }}
             <tr>

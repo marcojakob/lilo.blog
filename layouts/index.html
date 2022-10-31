@@ -44,7 +44,7 @@
 	</div>
 	{{ partial "pagination.html" . }}
 
-	{{- if gt (len $paginator.Pages) 2 }}
+	{{- if gt $paginator.TotalNumberOfElements 2 }}
 	<div class="d-flex justify-content-center mt-3 mb-5">
 		<a class="link-gray-no-underline" href="/posts/">— Archive —</a>
 	</div>

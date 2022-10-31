@@ -228,6 +228,13 @@ hr {
   margin-bottom: -1px;
 }
 
+.archive-title .counter,
+.archive-table .counter {
+  font-size: 0.625em;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.55);
+}
+
 .tag-description,
 .archive-description {
   font-weight: 400;
