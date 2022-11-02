@@ -3,6 +3,7 @@
 ## Version 2.0.1
 
 - Replace deprecated 'dateFormat' with 'date_format' and 'editorComponents' with 'editor_components' in CMS Admin config.yml.
+- Replace deprecated 'date' widget with 'datetime' in CMS Admin config.yml.
 
 ## Version 2.0.0
 
