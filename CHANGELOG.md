@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 2.0.1
+
+- Replace deprecated 'dateFormat' with 'date_format' and 'editorComponents' with 'editor_components' in CMS Admin config.yml.
+
 ## Version 2.0.0
 
 - Update Hugo to v0.105.0.

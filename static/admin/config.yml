@@ -39,7 +39,7 @@ collections:
           label: "Datum",
           widget: "date",
           format: "YYYY-MM-DD",
-          dateFormat: "DD.MM.YYYY",
+          date_format: "DD.MM.YYYY",
         }
       - {
           name: "draft",
@@ -94,7 +94,7 @@ collections:
           widget: "markdown",
           minimal: true,
           buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
-          editorComponents: [],
+          editor_components: [],
           required: false,
           hint: "Kann für Quellenangaben oder andere Hinweise verwendet werden.",
         }
@@ -156,7 +156,7 @@ collections:
           widget: "markdown",
           minimal: true,
           buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
-          editorComponents: [],
+          editor_components: [],
           required: false,
           hint: "Kann für Quellenangaben oder andere Hinweise verwendet werden.",
         }
@@ -196,7 +196,7 @@ collections:
               minimal: true,
               buttons:
                 ["bold", "italic", "link", "bulleted-list", "numbered-list"],
-              editorComponents: [],
+              editor_components: [],
               required: false,
               hint: "Fusszeile ganz unten links an der Seite.",
             }
@@ -207,7 +207,7 @@ collections:
               minimal: true,
               buttons:
                 ["bold", "italic", "link", "bulleted-list", "numbered-list"],
-              editorComponents: [],
+              editor_components: [],
               required: false,
               hint: "Fusszeile ganz unten rechts an der Seite.",
             }
