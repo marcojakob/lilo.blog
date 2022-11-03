@@ -1,11 +1,16 @@
 # Changelog
 
-## Version 2.0.1
+## Version 2.0.2 (2022-11-03)
+
+- 💛 Use yellow heart in footer. Just because.
+- Add example Links in right footer.
+
+## Version 2.0.1 (2022-11-03)
 
 - Replace deprecated 'dateFormat' with 'date_format' and 'editorComponents' with 'editor_components' in CMS Admin config.yml.
 - Replace deprecated 'date' widget with 'datetime' in CMS Admin config.yml.
 
-## Version 2.0.0
+## Version 2.0.0 (2022-11-01)
 
 - Update Hugo to v0.105.0.
 - Upgrade to Bootstrap 5.2. Remove jQuery.
