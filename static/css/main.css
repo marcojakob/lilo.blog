@@ -541,6 +541,11 @@ hr {
   margin-bottom: 0;
 }
 
+.article-content .alert > *:first-child,
+.article-content .accordion-body > *:first-child {
+  margin-top: 0;
+}
+
 .article-content .accordion-item {
   color: rgba(0, 0, 0, 0.8);
   background-color: var(--bs-gray-300);

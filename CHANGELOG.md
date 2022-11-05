@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 2.0.3 (2022-11-05)
+
+- Fix first heading in box (alert, accordion) having a large top margin.
+
 ## Version 2.0.2 (2022-11-03)
 
 - 💛 Use yellow heart in footer. Just because.
