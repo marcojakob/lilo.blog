@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 2.0.4 (2022-11-07)
+
+- Fix navigation autohide bug: In Safari the scroll position at the top was not correctly dectected because of the 
+  browsers bounce effect. This caused the navigation to be hidden when it should not be hidden.
+
 ## Version 2.0.3 (2022-11-05)
 
 - Fix first heading in box (alert, accordion) having a large top margin.
