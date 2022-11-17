@@ -35,24 +35,24 @@ baseName = "index"
 isPlainText = false
 
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true
 
 [frontmatter]
 lastmod = ['lastmod', ':git', ':fileModTime', 'date', 'publishDate']
 
 [related]
-  includeNewer = true
-  threshold = 50
-  toLower = true
+includeNewer = true
+threshold = 50
+toLower = true
 [[related.indices]]
-  name = "tags"
-  weight = 80
+name = "tags"
+weight = 80
 [[related.indices]]
-  name = "date"
-  weight = 60
+name = "date"
+weight = 60
 
 [privacy]
-  [privacy.vimeo]
-    enableDNT = true
-  [privacy.youtube]
-    privacyEnhanced = true
+[privacy.vimeo]
+enableDNT = true
+[privacy.youtube]
+privacyEnhanced = true

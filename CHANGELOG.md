@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 2.0.5 (2022-11-17)
+
+- Format config.toml.
+
 ## Version 2.0.4 (2022-11-07)
 
 - Fix navigation autohide bug: In Safari the scroll position at the top was not correctly dectected because of the 
