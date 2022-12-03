@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.0.0 (2022-12-03)
+
+- Rebranding: Rename Lernblog to Lilo.Blog and change Domain to lilo.blog.
+
 ## Version 2.0.5 (2022-11-17)
 
 - Format config.toml.

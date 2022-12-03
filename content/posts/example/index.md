@@ -1,9 +1,9 @@
 +++
 title = "Example Post"
-date = "2022-10-24"
+date = "2023-01-01"
 draft = false
 pinned = false
-tags = ["Example", "Lernblog"]
+tags = [ "Lilo", "Example" ]
 image = "/img/default-image.jpg"
 description = "In diesem Artikel werden Möglichkeiten aufgezeigt für das Verfassen von Blogeinträgen."
 footnotes = "In der Fusszeile können zum Beispiel Bildquellen angegeben werden. Dieser Text ist abgetrennt durch eine Linie und etwas kleiner."
@@ -41,13 +41,13 @@ Natürlich gibt es auch **fett** und _kursiv_.
 
 ### Links
 
-[So können Links angegeben werden](https://www.lernblog.org). Wenn man in den `Markdown`-Modus wechselt, sieht man auch, welcher Link hinterlegt worden ist.
+[So können Links angegeben werden](https://www.lilo.blog). Wenn man in den `Markdown`-Modus wechselt, sieht man auch, welcher Link hinterlegt worden ist.
 
 ### Zitate
 
 > «Zitate können hervorgehoben werden.»
 >
-> _Autor mit [Link zur Quelle](https://www.lernblog.org)_
+> _Autor mit [Link zur Quelle](https://www.lilo.blog)_
 
 Die Quellenangabe muss _kursiv_ geschrieben werden, damit sie als Fusszeile erkannt wird.
 
@@ -108,12 +108,11 @@ In dieser Box können Texte, Bilder, Videos oder andere Inhalte dargestellt werd
 {{</box>}}
 
 `{{</*box*/>}}`  
-Der Inhalt einer Box muss wie hier von zwei Blöcken umgeben werden.   
+Der Inhalt einer Box muss wie hier von zwei Blöcken umgeben werden.  
 `{{</*/box*/>}}`
 
 {{<box title="Ausklappbare Box">}}
 Wird ein Titel angegeben, so kann die Box ausgeklappt werden.
-
 
 Dies eignet sich auch für längere Inhalte.
 
@@ -122,8 +121,8 @@ Dies eignet sich auch für längere Inhalte.
 Auch Bilder können in eine Box gepackt werden.
 {{</box>}}
 
-`{{</*box title="Ausklappbare Box"*/>}}`   
-Wird ein Titel angegeben, so kann die Box ausgeklappt werden.   
+`{{</*box title="Ausklappbare Box"*/>}}`  
+Wird ein Titel angegeben, so kann die Box ausgeklappt werden.  
 `{{</*/box*/>}}`
 
 ## Video, Audio und andere Medien einbetten
@@ -162,4 +161,4 @@ sun1 === sun2;
 
 ## Spass haben
 
-😀 Viel Spass mit deinem Lernblog!
+😀 Viel Spass mit deinem Blog!

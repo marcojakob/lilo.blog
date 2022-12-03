@@ -2,7 +2,7 @@
 {{ $settingsDesign := .Site.GetPage "/settings/design" -}}
 {{ $settingsAuthor := .Site.GetPage "/settings/author" -}}
 
-<meta name="generator" content="{{ .Site.Params.lernblogName }} {{ .Site.Params.lernblogVersion }} - {{ .Site.Params.lernblogUrl }}" />
+<meta name="generator" content="{{ .Site.Params.blogName }} {{ .Site.Params.blogVersion }} - {{ .Site.Params.blogUrl }}" />
 <link rel="icon" href="{{ $settingsDesign.Params.icon | default `/img/default-favicon.png` }}">
 <title>{{ with .Title }}{{ . }} | {{ end }}{{ $settingsGeneral.Title }}</title>
 <meta name="description" content="{{ .Description | default .Summary | default $settingsGeneral.Description }}">

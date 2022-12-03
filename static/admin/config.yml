@@ -5,7 +5,7 @@ media_folder: "content/media"
 public_folder: "/media"
 
 site_url: "/"
-display_url: "https://lernblog.org"
+display_url: "https://lilo.blog"
 
 slug:
   encoding: "ascii" # Only allows characters (0-9, a-z, A-Z, _, -, ~)
@@ -241,7 +241,7 @@ collections:
               name: "email",
               widget: "string",
               required: false,
-              hint: "Deine E-Mail-Adresse. Diese wird verwendet, um dich als Autor erreichen zu können (z.B. für die Lernblog-Plattform).",
+              hint: "Deine E-Mail-Adresse. Diese wird verwendet, um dich als Autor erreichen zu können.",
             }
       - name: "design"
         label: "Design"
