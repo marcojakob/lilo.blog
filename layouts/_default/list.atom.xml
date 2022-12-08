@@ -46,13 +46,16 @@
   {{- /* Author info. */}}
   <author>
     <name>{{ $settingsAuthor.Params.name | htmlEscape }}</name>
-    {{- with $settingsAuthor.Params.email }}
-    <email>{{ . | htmlEscape }}</email>
+    {{- with $settingsAuthor.Params.image }}
+    <avatar>{{ . | absURL }}</avatar>
+    {{- end }}
+    {{- with $settingsAuthor.Params.url }}
+    <uri>{{ . | absURL }}</uri>
     {{- end }}
   </author>
 
-  {{- /* Icon: Use the author image as icon (should be square). */}}
-  {{- with $settingsAuthor.Params.image }}
+  {{- /* Icon: A small icon that is also used as favicon to identify the website (should be square). */}}
+  {{- with $settingsDesign.Params.icon }}
   <icon>{{ . | absURL }}</icon>
   <webfeeds:icon>{{ . | absURL }}</webfeeds:icon>
   {{- end }}
