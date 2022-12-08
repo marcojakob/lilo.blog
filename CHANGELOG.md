@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 3.0.1 (2022-12-08)
+
+- Admin: Remove email from author settings. Add link to author page. 
+- ATOM feed:
+  - Remove author email
+  - Add avatar (profile image)
+  - Add link to author page.
+  - Use favicon as feed icon.
+
 ## Version 3.0.0 (2022-12-03)
 
 - Rebranding: Rename Lernblog to Lilo.Blog and change Domain to lilo.blog.

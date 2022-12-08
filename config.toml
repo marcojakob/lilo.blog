@@ -10,7 +10,7 @@ copyright = "2023 by Lilo.Blog - Creative Commons Attribution-ShareAlike 4.0"
 
 [params]
 blogName = "Lilo.Blog"
-blogVersion = "3.0.0"
+blogVersion = "3.0.1"
 blogUrl = "https://www.lilo.blog"
 paginateHome = 12
 paginateTags = 36
