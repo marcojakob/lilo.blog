@@ -2,5 +2,5 @@
 headless = true
 name = "My Name"
 image = ""
-email = ""
+url = "/about/"
 +++

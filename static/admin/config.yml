@@ -237,11 +237,11 @@ collections:
               media_library: { config: { max_file_size: 256000 } },
             }
           - {
-              label: "E-Mail",
-              name: "email",
+              label: "Profilseite",
+              name: "url",
               widget: "string",
               required: false,
-              hint: "Deine E-Mail-Adresse. Diese wird verwendet, um dich als Autor erreichen zu können.",
+              hint: "Eine Seite über dich als Autor. Kann z.B. die About-Seite sein oder ein Profil auf Social Media.",
             }
       - name: "design"
         label: "Design"
