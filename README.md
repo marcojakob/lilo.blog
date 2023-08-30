@@ -16,7 +16,7 @@ For more information head over to [www.lilo.blog](https://www.lilo.blog).
 
 Use the following button to install your own Lilo.Blog (for help see instructions on [www.lilo.blog](https://www.lilo.blog)).
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/marcojakob/lilo-blog&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/marcojakob/lilo.blog&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 ## License
 
