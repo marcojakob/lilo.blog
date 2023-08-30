@@ -6,11 +6,11 @@ buildFuture = true
 paginatePath = "page"
 disableKinds = ["RSS"]
 pygmentsCodefences = true
-copyright = "2023 by Lilo.Blog - Creative Commons Attribution-ShareAlike 4.0"
+copyright = "2023 by Lilo.blog - Creative Commons Attribution-ShareAlike 4.0"
 
 [params]
-blogName = "Lilo.Blog"
-blogVersion = "3.0.1"
+blogName = "Lilo.blog"
+blogVersion = "3.1.0"
 blogUrl = "https://www.lilo.blog"
 paginateHome = 12
 paginateTags = 36

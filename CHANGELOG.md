@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 3.1.0 (2023-02-20)
+
+- Update to Hugo v0.110.0.
+- Make `hugo.toml` the new `config.toml` (see [hugo #8979](https://github.com/gohugoio/hugo/issues/8979)).
+- Use `default-author.jpg` image in author settings and about page to show in the CMS that the image can be changed.
+- Link to Lilo.page and bring in the purple color. 
+
 ## Version 3.0.1 (2022-12-08)
 
 - Admin: Remove email from author settings. Add link to author page. 
@@ -11,7 +18,7 @@
 
 ## Version 3.0.0 (2022-12-03)
 
-- Rebranding: Rename Lernblog to Lilo.Blog and change Domain to lilo.blog.
+- Rebranding: Rename Lernblog to Lilo.blog and change Domain to lilo.blog.
 
 ## Version 2.0.5 (2022-11-17)
 

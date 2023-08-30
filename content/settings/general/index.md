@@ -1,7 +1,7 @@
 +++
 headless = true
 title = "My Name"
-description = "A Journey of Life and Learning"
-footerLeft = "Powered by 💛 and [Lilo.Blog](https://www.lilo.blog)"
-footerRight = "[🏷️ Tags](/tags/) | [🗃️ Archive](/posts/) | [📣 Social](https://www.lilo.blog)"	
+description = "A Lifelong Journey"
+footerLeft = "Powered by 💜 [Lilo.page](https://www.lilo.page)"
+footerRight = "🏷️ [Tags](/tags/) | 🗃️ [Archive](/posts/)"	
 +++
